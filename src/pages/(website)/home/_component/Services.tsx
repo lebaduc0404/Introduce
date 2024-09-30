@@ -1,5 +1,7 @@
+import { Link } from "react-router-dom";
+
 const Services = () => {
-  const LinkPost = "#";
+  // const LinkPost = "#";
   const LinkVideo = "#";
   const LinkIntro = "#";
   const LinkEmail = "#";
@@ -12,9 +14,9 @@ const Services = () => {
             <h2 className="font-black text-[1.17em] font-helvetica">Update</h2>
             <p className="">
               ✨ Read the{" "}
-              <a href={LinkPost} className="text-blue-600 underline">
+              <Link to="/launch" className="text-blue-600 underline">
                 launch blog post
-              </a>{" "}
+              </Link>{" "}
               | Watch the{" "}
               <a href={LinkVideo} className="text-blue-600 underline">
                 launch video

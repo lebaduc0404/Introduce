@@ -3,8 +3,8 @@ import { useEffect, useRef, useState } from "react";
 const ProductInformation = () => {
   const img = [
     "https://nutrify.app/images/images-1.2.1/00-nutrify-summary-screenshot.png",
-    "https://nutrify.app/images/images-1.2.1/00-nutrify-summary-screenshot.png",
-    "https://nutrify.app/images/images-1.2.1/00-nutrify-summary-screenshot.png",
+    "https://nutrify.app/images/images-1.2.1/01-nutrify-camera-preview-screenshot.png",
+    "https://nutrify.app/images/images-1.2.1/02-nutrify-photo-taken-of-pineapple-screenshot.png",
     "https://nutrify.app/images/images-1.2.1/00-nutrify-summary-screenshot.png",
     "https://nutrify.app/images/images-1.2.1/00-nutrify-summary-screenshot.png",
     "https://nutrify.app/images/images-1.2.1/00-nutrify-summary-screenshot.png",
@@ -18,18 +18,42 @@ const ProductInformation = () => {
   const [atStart, setAtStart] = useState(true);
   const [atEnd, setAtEnd] = useState(true);
 
-  const handleNext = () => {
-       if (scrollRef.current) {
-         scrollRef.current.scrollBy({ left: 210, behavior: "smooth" });
-       }
-   };
+  const [isOpen, setIsOpen] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-   const handleBack = () => {
-     if (scrollRef.current) {
-       scrollRef.current.scrollBy({ left: -210, behavior: "smooth" });
-     }
-   };
-  
+  const openModal = (index: number) => {
+    setCurrentIndex(index);
+    setIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsOpen(false);
+  };
+
+  const handleNext1 = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === img.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
+  const handleBack1 = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? img.length - 1 : prevIndex - 1
+    );
+  };
+
+  const handleNext = () => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollBy({ left: 210, behavior: "smooth" });
+    }
+  };
+
+  const handleBack = () => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollBy({ left: -210, behavior: "smooth" });
+    }
+  };
+
   const checkScrollPosition = () => {
     if (scrollRef.current) {
       const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
@@ -68,12 +92,21 @@ const ProductInformation = () => {
             className="w-[100%] max-w-[1000px] h-auto flex-shrink-0 flex-grow-0 flex-auto flex gap-[10px] overflow-x-auto scroll-smooth no-scrollbar"
           >
             {img.map((img, index) => (
-              <img
-                key={index}
-                className="w-[100%] max-w-[200px] mx-auto block"
-                src={img}
-                alt=""
-              />
+              <a
+                href={img}
+                onClick={(e) => {
+                  e.preventDefault();
+                  openModal(index);
+                }}
+                className="w-[100%] max-w-[200px] h-auto flex-shrink-0 flex-grow-0 flex-auto flex gap-[10px] overflow-x-auto scroll-smooth no-scrollbar"
+              >
+                <img
+                  key={index}
+                  className="w-[100%] max-w-[200px] mx-auto block"
+                  src={img}
+                  alt=""
+                />
+              </a>
             ))}
           </div>
           {!atStart && (
@@ -91,6 +124,33 @@ const ProductInformation = () => {
             >
               &gt;
             </button>
+          )}
+          {isOpen && (
+            <div className="fixed inset-0 bg-black bg-opacity-80 flex justify-center items-center z-50">
+              <button
+                className="absolute top-4 right-4 text-white text-3xl"
+                onClick={closeModal}
+              >
+                &times;
+              </button>
+              <img
+                className="w-auto max-w-full h-auto max-h-full"
+                src={img[currentIndex]}
+                alt=""
+              />
+              <button
+                className="absolute left-2 text-white text-3xl bg-gray-300 max-w-[30px] w-[100%]"
+                onClick={handleBack1}
+              >
+                &#10094;
+              </button>
+              <button
+                className="absolute right-2 text-white text-3xl bg-gray-300 max-w-[30px] w-[100%]"
+                onClick={handleNext1}
+              >
+                &#10095;
+              </button>
+            </div>
           )}
         </div>
       </section>

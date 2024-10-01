@@ -139,13 +139,13 @@ const ProductInformation = () => {
                 alt=""
               />
               <button
-                className="absolute left-2 text-white text-3xl bg-gray-300 max-w-[30px] w-[100%]"
+                className="absolute left-2 text-black text-3xl w-[38px] h-[38px] flex items-center justify-center border-2 border-white rounded-full"
                 onClick={handleBack1}
               >
                 &#10094;
               </button>
               <button
-                className="absolute right-2 text-white text-3xl bg-gray-300 max-w-[30px] w-[100%]"
+                className="absolute right-2 text-black text-3xl w-[38px] h-[38px] flex items-center justify-center border-2 border-white rounded-full"
                 onClick={handleNext1}
               >
                 &#10095;

@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 const Services = () => {
   // const LinkPost = "#";
   const LinkVideo = "#";
-  const LinkIntro = "#";
   const LinkEmail = "#";
   const LinkTerms = "#";
   const LinkPrivacy = "#";
@@ -25,11 +24,11 @@ const Services = () => {
             </p>
 
             <p className="my-[1em]">
-              29 May 2024 -{" "}
-              <a href={LinkIntro} className="text-blue-600 underline">
+              29 May 2024 -
+              <Link to="/new" className="text-blue-600 underline">
                 Introducing Nutrify 1.2: Calorie and Macronutrient Goals,
                 Breakdowns and 57 New Foods
-              </a>
+              </Link>
             </p>
           </div>
           <div>

@@ -33,6 +33,9 @@ const Features = () => {
           The video is a live screen recording of a lasagne lunch hike break on
           top of Mt. Tamborine, Queensland, Australia.
         </p>
+
+        {/* ---------------------------------------------------------------------------- */}
+
         <h3 className="text-[1.17em] my-[1em] font-bold">
           📔 Create a Visual Food Diary
         </h3>
@@ -66,6 +69,9 @@ const Features = () => {
           You could use this to show a nutrition coach or wellness practitioner
           what you’ve eaten and get their insights.
         </p>
+
+        {/* -------------------------------------------------------------------------------- */}
+
         <h3 className="text-[1.17em] my-[1em] font-bold">
           🔍 Discover new foods and complete the Nutridex
         </h3>
@@ -124,6 +130,9 @@ const Features = () => {
           If you find that your favourite food isn’t in the Nutridex, let us
           know so we can expand it!
         </p>
+
+        {/* --------------------------------------------------------------------------------- */}
+
         <h3 className="text-[1.17em] my-[1em] font-bold">
           📊 Get stats and trends of your food habits over time
         </h3>

@@ -1,5 +1,5 @@
-
 const Information = () => {
+  const LinkDownload = "";
   const text = [
     "📸 Identify 470+ foods with your camera.",
     "📊 Track whole food calories and nutrition.",
@@ -25,10 +25,19 @@ const Information = () => {
             </h2>
             <div className="my-[1em] block">
               {text.map((item, index) => (
-                <p key={index} className="">{item }</p>
+                <p key={index} className="">
+                  {item}
+                </p>
               ))}
             </div>
           </div>
+          <a href={LinkDownload}>
+            <img
+              className="max-w-[200px] w-[auto] mx-auto block h-[54px]"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpZDy2VARzMAh1et9p-Jffbtvsi1z7HZkLQyFMF2AGih3uQA4js7e15kN7SypixzIc6PU&usqp=CAU"
+              alt=""
+            />
+          </a>
         </div>
       </section>
     </>

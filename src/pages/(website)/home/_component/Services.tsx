@@ -1,11 +1,8 @@
 import { Link } from "react-router-dom";
 
 const Services = () => {
-  // const LinkPost = "#";
   const LinkVideo = "#";
   const LinkEmail = "#";
-  const LinkTerms = "#";
-  const LinkPrivacy = "#";
     return (
       <>
         <section className="services">
@@ -48,13 +45,16 @@ const Services = () => {
           <div>
             <h2 className="font-black text-[1.17em] font-helvetica">Legal</h2>
             <p>
-              <a href={LinkTerms} className="text-blue-600 underline">
+              <Link to="/terms" className="text-blue-600 underline">
                 Terms of Use
-              </a>{" "}
+              </Link>{" "}
               &{" "}
-              <a href={LinkPrivacy} className="text-blue-600 underline">
+              <Link
+                to="/terms#privacy-policy"
+                className="text-blue-600 underline"
+              >
                 Privacy Policy
-              </a>
+              </Link>
             </p>
           </div>
         </section>

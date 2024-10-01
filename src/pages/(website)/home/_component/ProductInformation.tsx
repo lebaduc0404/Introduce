@@ -118,7 +118,7 @@ const ProductInformation = () => {
           </div>
           {isOpen && (
             <div
-              className="fixed inset-0 bg-black flex justify-center items-center z-50"
+              className="fixed inset-0 bg-black bg-opacity-65 flex justify-center items-center z-50"
               onTouchStart={handleStart}
               onTouchEnd={handleEnd}
               onMouseDown={handleStart}
@@ -126,20 +126,21 @@ const ProductInformation = () => {
               onMouseLeave={handleEnd}
             >
               <button
-                className="absolute top-4 right-4 text-white text-3xl"
+                className="absolute top-1 right-2 text-red-600 text-4xl w-[30px] h-[30px] flex items-center justify-center rounded-full z-50"
                 onClick={closeModal}
               >
                 &times;
               </button>
+
               <img
-                  className={`w-auto max-w-full h-auto max-h-full relative transition-transform duration-300 ease-in-out transform ${
-                    isTransitioning
-                      ? "scale-95 opacity-75"
-                      : "scale-100 opacity-100"
-                  }`}
-                  src={img[currentIndex]}
-                  alt="modal view"
-                />
+                className={`w-auto max-w-full h-auto max-h-full relative transition-transform duration-300 ease-in-out transform ${
+                  isTransitioning
+                    ? "scale-95 opacity-75"
+                    : "scale-100 opacity-100"
+                }`}
+                src={img[currentIndex]}
+                alt="modal view"
+              />
               <button
                 className="absolute left-2 text-white text-3xl w-[38px] h-[38px] flex items-center justify-center border-2 border-white rounded-full"
                 onClick={handleBack1}

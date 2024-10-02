@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { LinkDownload } from "../../introducing/Link";
 
 const Accounts = () => {
   return (
@@ -8,7 +9,11 @@ const Accounts = () => {
           REGISTRATION AND ACCOUNTS
         </h2>
         <p className="mt-[1em] mb-[1em] block">
-          Nutrify can be downloaded from the Apple App Store.
+          Nutrify can be downloaded from the
+          <Link to={LinkDownload} className="text-blue-600 underline">
+            {" "}
+            Apple App Store.
+          </Link>
         </p>
         <p className="mt-[1em] mb-[1em] block">
           To use certain features of Nutrify, you may be required to create an

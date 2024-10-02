@@ -1,5 +1,8 @@
+import { Link } from "react-router-dom";
 import {ImageGoals} from "../img";
-import {ImageSAD} from "../img";
+import { ImageSAD } from "../img";
+import { LinkAi } from "../Link";
+import { LinkDiet } from "../Link";
 
 const LongerVersion = () => {
   return (
@@ -15,9 +18,9 @@ const LongerVersion = () => {
         <p className="mt-[1em] mb-[1em] block">And we’ve built it.</p>
         <p className="mt-[1em] mb-[1em] block">
           In 2017,{" "}
-          <a href="#" className="text-blue-600 underline">
+          <Link to={LinkAi} className="text-blue-600 underline">
             I started learning machine learning/AI
-          </a>{" "}
+          </Link>{" "}
           with the explicit goal of “Combine AI with my knowledge of fitness and
           nutrition to help the world move more and eat better.”
         </p>
@@ -54,10 +57,10 @@ const LongerVersion = () => {
         </p>
         <p className="mt-[1em] mb-[1em] block">
           Basically any diet other than the{" "}
-          <a href="#" className="text-blue-600 underline">
+          <Link to={LinkDiet} className="text-blue-600 underline">
             {" "}
             Standard American Diet
-          </a>{" "}
+          </Link>{" "}
           (SAD for short, funny), a diet full of ultra-processed foods, is a
           good alternative (AKA diets full of whole foods).
         </p>

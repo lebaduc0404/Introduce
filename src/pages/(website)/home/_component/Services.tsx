@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
+import { LinkVideo } from "../../introducing/Link";
 
 const Services = () => {
-  const LinkVideo = "#";
   const LinkEmail = "#";
     return (
       <>
@@ -14,9 +14,9 @@ const Services = () => {
                 launch blog post
               </Link>{" "}
               | Watch the{" "}
-              <a href={LinkVideo} className="text-blue-600 underline">
+              <Link to={LinkVideo} className="text-blue-600 underline">
                 launch video
-              </a>{" "}
+              </Link>{" "}
               ✨
             </p>
 
@@ -37,9 +37,9 @@ const Services = () => {
           <div className="my-[1em]">
             <h2 className="font-black text-[1.17em] font-helvetica">Contact</h2>
             <p>
-              <a href={LinkEmail} className="text-blue-600 underline">
+              <Link to={LinkEmail} className="text-blue-600 underline">
                 support@nutrify.app
-              </a>
+              </Link>
             </p>
           </div>
           <div>

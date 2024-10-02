@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { LinkDownload, LinkSupport, Price } from "../../introducing/Link";
 
 const AppCosts = () => {
   return (
@@ -12,7 +13,7 @@ const AppCosts = () => {
         </h3>
         <p className="mt-[1em] mb-[1em] block">
           Nutrify can be downloaded from the{" "}
-          <Link to="#" className="text-blue-600 underline">
+          <Link to={LinkDownload} className="text-blue-600 underline">
             Apple App Store.
           </Link>
         </p>
@@ -21,7 +22,7 @@ const AppCosts = () => {
           at USD 3.99/month (inc GST) or USD 24.99/year (inc GST). Please note
           these are base prices and may be subject to{" "}
           <Link
-            to="https://developer.apple.com/help/app-store-connect/manage-app-pricing/set-a-price"
+            to={Price}
             className="text-blue-600 underline"
           >
             {" "}
@@ -78,7 +79,7 @@ const AppCosts = () => {
         <p className="mt-[1em] mb-[1em] block">
           If you have any questions regarding your subscription or the App,
           please contact us at{" "}
-          <Link to="#" className="text-blue-600 underline">
+          <Link to={LinkSupport} className="text-blue-600 underline">
             support@nutrify.app
           </Link>{" "}
           or through our website{" "}

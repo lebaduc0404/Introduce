@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
 import { Logo } from "../../home/_component/Information";
 import { ImageOverview } from "../img";
+import { LinkProduct } from "../Link";
+import { LinkVideo } from "../Link";
+import { LinkDownload } from "../Link";
 
 const ShortVersion = () => {
   return (
@@ -41,19 +44,19 @@ const ShortVersion = () => {
         </p>
         <ul className="list-disc my-[1em] pl-10">
           <li>
-            <a href="#" className="text-blue-600 underline">
+            <Link to={LinkProduct} className="text-blue-600 underline">
               See the launch on Product Hunt.
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#" className="text-blue-600 underline">
+            <Link to={LinkVideo} className="text-blue-600 underline">
               Watch the launch video on YouTube.
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#" className="text-blue-600 underline">
+            <Link to={LinkDownload} className="text-blue-600 underline">
               Download Nutrify
-            </a>{" "}
+            </Link>{" "}
             on the iOS App Store.
           </li>
         </ul>

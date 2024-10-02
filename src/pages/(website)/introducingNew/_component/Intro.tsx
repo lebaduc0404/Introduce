@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { ImageIntro } from "../img";
 import { Logo } from "../../home/_component/Information";
+import { LinkDownload } from "../../introducing/Link";
 
 
 const Intro = () => {
@@ -23,9 +24,9 @@ const Intro = () => {
         <img className="mx-auto max-w-[100%] h-auto" src={ImageIntro} alt="" />
         
         <p className="mt-[1em] mb-[1em] block">
-          <a href="#" className="text-blue-600 underline">
+          <Link to={LinkDownload} className="text-blue-600 underline">
             Nutrify 1.2
-          </a>{" "}
+          </Link>{" "}
           is here!
         </p>
         <p className="mt-[1em] mb-[1em] block">What is Nutrify?</p>

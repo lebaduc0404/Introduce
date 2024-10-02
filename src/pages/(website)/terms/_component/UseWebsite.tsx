@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { LinkSupport } from "../../introducing/Link";
 
 const UseWebsite = () => {
   return (
@@ -125,7 +126,7 @@ const UseWebsite = () => {
         <p className="mt-[1em] mb-[1em] block">
           If you are concerned about any reviews or comments, please contact us
           at
-          <Link to="#" className="text-blue-600 underline">
+          <Link to={LinkSupport} className="text-blue-600 underline">
             support@nutrify.app.
           </Link>
         </p>
@@ -211,7 +212,7 @@ const UseWebsite = () => {
           registration and accounts, App costs, subscription, our cancellation
           and refund policy, privacy policy or website terms and conditions,
           please contact us at
-          <Link to="#" className="text-blue-600 underline">
+          <Link to={LinkSupport} className="text-blue-600 underline">
             support@nutrify.app
           </Link>{" "}
           and we will endeavour to respond within 48 hours.
@@ -225,7 +226,7 @@ const UseWebsite = () => {
         <p className="mt-[1em] mb-[1em] block">
           If you wish to make a complaint, please submit details of your
           complaint to{" "}
-          <Link to="#" className="text-blue-600 underline">
+          <Link to={LinkSupport} className="text-blue-600 underline">
             support@nutrify.app.
           </Link>
         </p>

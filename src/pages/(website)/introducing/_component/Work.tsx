@@ -1,4 +1,13 @@
-import {ImageWork} from "../img";
+import { Link } from "react-router-dom";
+import { ImageWork } from "../img";
+import { LinkData } from "../Link";
+import { LinkModulsTimm } from "../Link";
+import { LinkModulsHuggingFace } from "../Link";
+import { LinkWeightsBiases } from "../Link";
+import { LinkVideo } from "../Link";
+import { LinkFDC } from "../Link";
+import { LinkFSANZ } from "../Link";
+import { LinkSupabase } from "../Link";
 
 const Work = () => {
   return (
@@ -22,29 +31,27 @@ const Work = () => {
           A brief overview of how Nutrify works. One missing piece is the
           feedback loop that happens when Nutrify gets something wrong. We use
           this information to improve future models. Like a{" "}
-          <a href="https://www.mrdbourke.com/copying-teslas-data-engine-for-food-images/">
+          <Link to={LinkData}>
             data flywheel.
-          </a>
+          </Link>
         </p>
         <h3 className="text-[1.17em] my-[1em] font-bold">
           Machine Learning (Daniel)
         </h3>
         <p className="mt-[1em] mb-[1em] block">
           Computer vision models are fine-tuned versions of{" "}
-          <a
-            href="https://github.com/huggingface/pytorch-image-models"
+          <Link to={LinkModulsTimm}
             className="text-blue-600 underline"
           >
             timm
-          </a>{" "}
+          </Link>{" "}
           (PyTorch Image Models) models from
-          <a
-            href="https://huggingface.co/timm"
+          <Link to={LinkModulsHuggingFace}
             className="text-blue-600 underline"
           >
             {" "}
             Hugging Face
-          </a>
+          </Link>
           (thank you to Ross Wightman for the incredible work) on a custom
           dataset.
         </p>
@@ -53,9 +60,9 @@ const Work = () => {
         </p>
         <p className="mt-[1em] mb-[1em] block">
           Experiment and artifact tracking happens all with{" "}
-          <a href="https://wandb.ai/site" className="text-blue-600 underline">
+          <Link to={LinkWeightsBiases} className="text-blue-600 underline">
             Weights and Biases.
-          </a>
+          </Link>
         </p>
         <p>
           We're currently at 1000+ models trained as well as 100+ versions of
@@ -69,13 +76,12 @@ const Work = () => {
         <p className="mt-[1em] mb-[1em] block">
           We use an iterative training loop similar to Tesla’s data flywheel but
           for food images. You can{" "}
-          <a
-            href="https://www.youtube.com/watch?v=02b-1spzLzc"
+          <Link to={LinkVideo}
             className="text-blue-600 underline"
           >
             {" "}
             see this setup explained on YouTube.
-          </a>
+          </Link>
         </p>
         <h3 className="text-[1.17em] my-[1em] font-bold">iOS (Josh)</h3>
         <p className="mt-[1em] mb-[1em] block">
@@ -94,15 +100,15 @@ const Work = () => {
         <h3 className="text-[1.17em] my-[1em] font-bold">Database</h3>
         <p className="mt-[1em] mb-[1em] block">
           Our nutrition data comes from open-source nutrition databases (
-          <a href="https://fdc.nal.usda.gov/">FDC</a> and{" "}
-          <a href="https://www.foodstandards.gov.au/science-data/monitoringnutrients/afcd">
+          <Link to={LinkFDC}>FDC</Link> and{" "}
+          <Link to={LinkFSANZ}>
             FSANZ
-          </a>
+          </Link>
           ).
         </p>
         <p className="mt-[1em] mb-[1em] block">
           Metadata, object storage and authentication (sign-in with Apple etc)
-          happens via <a href="https://supabase.com/">Supabase.</a>
+          happens via <Link to={LinkSupabase}>Supabase.</Link>
         </p>
         <h3 className="text-[1.17em] my-[1em] font-bold">Food Icons (Grace)</h3>
         <p className="mt-[1em] mb-[1em] block">

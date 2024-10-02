@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import { LinkSupport } from "../../introducing/Link";
 
 const PrivacyPolicy = () => {
     useEffect(() => {
@@ -189,7 +190,7 @@ const PrivacyPolicy = () => {
         <p className="mt-[1em] mb-[1em] block">
           You may request details of personal information that we hold about you
           by emailing us at{" "}
-          <Link to="#" className="text-blue-600 underline">
+          <Link to={LinkSupport} className="text-blue-600 underline">
             {" "}
             support@nutrify.app.
           </Link>

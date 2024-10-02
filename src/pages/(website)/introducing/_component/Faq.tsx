@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom";
+import { LinkDownload } from "../Link";
+
 const Faq = () => {
   return (
     <>
@@ -91,10 +94,10 @@ const Faq = () => {
         </p>
         <p className="mt-[1em] mb-[1em] block">
           Nutrify is available for download on the{" "}
-          <a href="" className="text-blue-600 underline">
+          <Link to={LinkDownload} className="text-blue-600 underline">
             {" "}
             iOS App Store.
-          </a>{" "}
+          </Link>{" "}
           You can find it by searching for "Nutrify".
         </p>
         <p className="mt-[1em] mb-[1em] block">

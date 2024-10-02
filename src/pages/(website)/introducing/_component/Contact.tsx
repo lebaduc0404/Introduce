@@ -1,3 +1,10 @@
+import { Link } from "react-router-dom";
+import { LinkSupport } from "../Link";
+import { LinkDownload } from "../Link";
+import { LinkInstagram } from "../Link";
+import { LinkTikTok } from "../Link";
+import { LinkX } from "../Link";
+
 const Contact = () => {
   return (
     <>
@@ -7,42 +14,42 @@ const Contact = () => {
         </h2>
         <p className="mt-[1em] mb-[1em] block">
           If you have any ideas or foods you’d like to see in Nutrify, feel free
-          to let us know!
+          to let us know! We are pleased to cooperate.
         </p>
         <p className="mt-[1em] mb-[1em] block">
           Our contact email is{" "}
-          <a href="" className="text-blue-600 underline">
+          <Link to={LinkSupport} className="text-blue-600 underline">
             support@nutrify.app.
-          </a>
+          </Link>
         </p>
         <p className="mt-[1em] mb-[1em] block">
           And you can find us elsewhere:
         </p>
         <ul className="list-disc my-[1em] pl-10">
           <li>
-            <a href="" className="text-blue-600 underline">
+            <Link to="/" className="text-blue-600 underline">
               Website
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="" className="text-blue-600 underline">
+            <Link to={LinkDownload} className="text-blue-600 underline">
               Download on the App Store
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="" className="text-blue-600 underline">
+            <Link to={LinkInstagram} className="text-blue-600 underline">
               Instagram{" "}
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="" className="text-blue-600 underline">
+            <Link to={LinkTikTok} className="text-blue-600 underline">
               Tik tok{" "}
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="" className="text-blue-600 underline">
+            <Link to={LinkX} className="text-blue-600 underline">
               X
-            </a>
+            </Link>
           </li>
         </ul>
         <p className="mt-[1em] mb-[1em] block">

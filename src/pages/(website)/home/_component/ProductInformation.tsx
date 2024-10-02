@@ -1,17 +1,28 @@
 import React, { useEffect, useState } from "react";
 
+import Slide0 from "../../image/Slide-0.png";
+import Slide1 from "../../image/Slide-1.png";
+import Slide2 from "../../image/Slide-2.png";
+import Slide3 from "../../image/Slide-3.png";
+import Slide4 from "../../image/Slide-4.png";
+import Slide5 from "../../image/Slide-5.png";
+import Slide6 from "../../image/Slide-6.png";
+import Slide7 from "../../image/Slide-7.png";
+import Slide8 from "../../image/Slide-8.png";
+
+const img = [
+  Slide0,
+  Slide1,
+  Slide2,
+  Slide3,
+  Slide4,
+  Slide5,
+  Slide6,
+  Slide7,
+  Slide8,
+];
+
 const ProductInformation = () => {
-  const img = [
-    "https://nutrify.app/images/images-1.2.1/00-nutrify-summary-screenshot.png",
-    "https://nutrify.app/images/images-1.2.1/01-nutrify-camera-preview-screenshot.png",
-    "https://nutrify.app/images/images-1.2.1/02-nutrify-photo-taken-of-pineapple-screenshot.png",
-    "https://nutrify.app/images/images-1.2.1/03-nutrify-pineapple-nutrition-information.png",
-    "https://nutrify.app/images/images-1.2.1/04-nutrify-set-calorie-and-macro-goal-screenshot.png",
-    "https://nutrify.app/images/images-1.2.1/05-nutrify-macronutrient-summary.png",
-    "https://nutrify.app/images/images-1.2.1/06-nutrify-stats-over-time.png",
-    "https://nutrify.app/images/images-1.2.1/07-nutrify-saved-food-diary.png",
-    "https://nutrify.app/images/images-1.2.1/08-nutrify-nutridex-screenshot.png",
-  ];
 
   const [isOpen, setIsOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -111,7 +122,7 @@ const ProductInformation = () => {
                 <img
                   className="w-[100%] max-w-[200px] mx-auto block"
                   src={img}
-                  alt=""
+                  alt="anh bi loi hien thi"
                 />
               </a>
             ))}

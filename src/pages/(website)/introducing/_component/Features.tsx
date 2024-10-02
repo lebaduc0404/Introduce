@@ -1,3 +1,8 @@
+import ImageAi from "../../image/nutrify-blog-post-overview-of-nutrify.png";
+import ImageDiary from "../../image/nutrify-blog-post-overview-of-nutrify.png";
+import ImageDiscover1 from "../../image/nutrify-blog-post-overview-of-nutrify.png";
+import ImageDiscover2 from "../../image/nutrify-blog-post-overview-of-nutrify.png";
+import ImageStats from "../../image/nutrify-blog-post-overview-of-nutrify.png";
 
 const Features = () => {
   return (
@@ -21,11 +26,7 @@ const Features = () => {
           All image processing happens on-device using the Neural Engine, so
           predictions happen really fast and work offline.
         </p>
-        <img
-          className="mx-auto max-w-[100%] h-auto"
-          src="https://nutrify.app/images/standard-american-diet.jpeg"
-          alt=""
-        />
+        <img className="mx-auto max-w-[100%] h-auto" src={ImageAi} alt="" />
         <p className="mt-[2px] text-center mb-[5px] block italic">
           Nutrify's computer vision models run on-device and leverage the Neural
           Engine (Apple's chip for machine learning) so they happen fast and
@@ -47,11 +48,7 @@ const Features = () => {
           Saving it stores it in your Visual Food Diary, an excellent way to
           reflect on what you’ve eaten.
         </p>
-        <img
-          className="mx-auto max-w-[100%] h-auto"
-          src="https://nutrify.app/images/standard-american-diet.jpeg"
-          alt=""
-        />
+        <img className="mx-auto max-w-[100%] h-auto" src={ImageDiary} alt="" />
         <p className="mt-[2px] text-center mb-[5px] block italic">
           Don't count calories. Look at what you've eaten instead. Nutrify
           enables an easy way to keep a visual log of what you've eaten.
@@ -90,7 +87,7 @@ const Features = () => {
         </p>
         <img
           className="mx-auto max-w-[100%] h-auto"
-          src="https://nutrify.app/images/03-nutrify-categories-example-whole-foods-focus.png"
+          src={ImageDiscover1}
           alt=""
         />
         <p className="mt-[2px] text-center mb-[5px] block italic">
@@ -110,7 +107,7 @@ const Features = () => {
         </p>
         <img
           className="mx-auto max-w-[100%] h-auto"
-          src="https://nutrify.app/images/03-nutrify-categories-example-whole-foods-focus.png"
+          src={ImageDiscover2}
           alt=""
         />
         <p className="mt-[2px] text-center mb-[5px] block italic">
@@ -149,11 +146,7 @@ const Features = () => {
           You can use these statistics and trends to gain insights on your food
           habits and adjust if necessary.
         </p>
-        <img
-          className="mx-auto max-w-[100%] h-auto"
-          src="https://nutrify.app/images/03-nutrify-categories-example-whole-foods-focus.png"
-          alt=""
-        />
+        <img className="mx-auto max-w-[100%] h-auto" src={ImageStats} alt="" />
         <p className="mt-[2px] text-center mb-[5px] block italic">
           As you take photos with Nutrify, the Summary tab (paid feature) will
           populate automatically with stats and trends. You'll also be able to

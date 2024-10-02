@@ -1,3 +1,6 @@
+import {ImageGoals} from "../img";
+import {ImageSAD} from "../img";
+
 const LongerVersion = () => {
   return (
     <>
@@ -18,11 +21,9 @@ const LongerVersion = () => {
           with the explicit goal of “Combine AI with my knowledge of fitness and
           nutrition to help the world move more and eat better.”
         </p>
-        <img
-          className="mx-auto max-w-[100%] h-auto"
-          src="https://nutrify.app/images/00-2017-ai-goals.png"
-          alt=""
-        />
+
+        <img className="mx-auto max-w-[100%] h-auto" src={ImageGoals} alt="" />
+
         <p className="mt-[2px] text-center mb-[5px] block italic">
           The initial goals I wrote in 2017 when I started learning AI and
           machine learning with my self-created AI Masters Degree.
@@ -60,11 +61,9 @@ const LongerVersion = () => {
           (SAD for short, funny), a diet full of ultra-processed foods, is a
           good alternative (AKA diets full of whole foods).
         </p>
-        <img
-          className="mx-auto max-w-[100%] h-auto"
-          src="https://nutrify.app/images/standard-american-diet.jpeg"
-          alt=""
-        />
+
+        <img className="mx-auto max-w-[100%] h-auto" src={ImageSAD} alt="" />
+
         <p className="mt-[2px] text-center mb-[5px] block italic">
           The Standard American Diet (SAD for short). If I learned anything in a
           nutrition and food science degree it's that nutrition can be summed up

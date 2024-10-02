@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import { Logo } from "../../home/_component/Information";
+import { ImageOverview } from "../img";
 
 const ShortVersion = () => {
   return (
@@ -7,7 +9,7 @@ const ShortVersion = () => {
         <Link to="/">
           <img
             className="max-w-[200px] w-[100%] mx-auto block"
-            src="https://nutrify.app/nutrify-app-logo-with-text.png"
+            src={Logo}
             alt=""
           />
         </Link>
@@ -55,11 +57,9 @@ const ShortVersion = () => {
             on the iOS App Store.
           </li>
         </ul>
-        <img
-          className="mx-auto max-w-[100%] h-auto"
-          src="https://nutrify.app/images/nutrify-blog-post-overview-of-nutrify.png"
-          alt=""
-        />
+
+        <img className="mx-auto max-w-[100%] h-auto" src={ImageOverview} alt="" />
+        
         <p className="mt-[2px] text-center mb-[5px] block italic">
           Take a photo of food and learn about it. Download Nutrify today on the
           Apple App Store.

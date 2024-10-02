@@ -1,4 +1,7 @@
 import { Link } from "react-router-dom";
+import { ImageIntro } from "../img";
+import { Logo } from "../../home/_component/Information";
+
 
 const Intro = () => {
   return (
@@ -7,7 +10,7 @@ const Intro = () => {
         <Link to="/">
           <img
             className="max-w-[200px] w-[100%] mx-auto block"
-            src="https://nutrify.app/nutrify-app-logo-with-text.png"
+            src={Logo}
             alt=""
           />
         </Link>
@@ -16,11 +19,9 @@ const Intro = () => {
           and 57 New Foods
         </h1>
         <p className="mt-[2px] text-left mb-[1em] block italic">29 May 2024</p>
-        <img
-          className="mx-auto max-w-[100%] h-auto"
-          src="https://nutrify.app/images/nutrify-blog-post-overview-of-nutrify.png"
-          alt=""
-        />
+        
+        <img className="mx-auto max-w-[100%] h-auto" src={ImageIntro} alt="" />
+        
         <p className="mt-[1em] mb-[1em] block">
           <a href="#" className="text-blue-600 underline">
             Nutrify 1.2

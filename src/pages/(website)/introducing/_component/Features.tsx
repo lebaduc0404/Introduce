@@ -1,8 +1,8 @@
-import ImageAi from "../../image/nutrify-blog-post-overview-of-nutrify.png";
-import ImageDiary from "../../image/nutrify-blog-post-overview-of-nutrify.png";
-import ImageDiscover1 from "../../image/nutrify-blog-post-overview-of-nutrify.png";
-import ImageDiscover2 from "../../image/nutrify-blog-post-overview-of-nutrify.png";
-import ImageStats from "../../image/nutrify-blog-post-overview-of-nutrify.png";
+import { ImageAi } from "../img";
+import {ImageDiary} from "../img";
+import { ImageDiscover1 } from "../img";
+import {ImageDiscover2} from "../img";
+import { ImageStats } from "../img";
 
 const Features = () => {
   return (
@@ -26,7 +26,9 @@ const Features = () => {
           All image processing happens on-device using the Neural Engine, so
           predictions happen really fast and work offline.
         </p>
+
         <img className="mx-auto max-w-[100%] h-auto" src={ImageAi} alt="" />
+
         <p className="mt-[2px] text-center mb-[5px] block italic">
           Nutrify's computer vision models run on-device and leverage the Neural
           Engine (Apple's chip for machine learning) so they happen fast and
@@ -48,7 +50,9 @@ const Features = () => {
           Saving it stores it in your Visual Food Diary, an excellent way to
           reflect on what you’ve eaten.
         </p>
+
         <img className="mx-auto max-w-[100%] h-auto" src={ImageDiary} alt="" />
+        
         <p className="mt-[2px] text-center mb-[5px] block italic">
           Don't count calories. Look at what you've eaten instead. Nutrify
           enables an easy way to keep a visual log of what you've eaten.
@@ -85,11 +89,13 @@ const Features = () => {
           For version 1.0, the Nutridex contains information 420 different foods
           across 22 different categories.
         </p>
+        
         <img
           className="mx-auto max-w-[100%] h-auto"
           src={ImageDiscover1}
           alt=""
         />
+        
         <p className="mt-[2px] text-center mb-[5px] block italic">
           Nutrify contains information for 420 foods from 22 different
           categories including fruit, vegetables, nuts and seeds, legumes, meat,
@@ -105,11 +111,13 @@ const Features = () => {
           Nutridex (see the launch video for what this looks like). A small
           incentive to continually try new foods.
         </p>
+        
         <img
           className="mx-auto max-w-[100%] h-auto"
           src={ImageDiscover2}
           alt=""
         />
+        
         <p className="mt-[2px] text-center mb-[5px] block italic">
           The Nutridex contains information about different foods and displays
           which foods you've discovered/haven't discovered with the camera.
@@ -146,7 +154,9 @@ const Features = () => {
           You can use these statistics and trends to gain insights on your food
           habits and adjust if necessary.
         </p>
+        
         <img className="mx-auto max-w-[100%] h-auto" src={ImageStats} alt="" />
+        
         <p className="mt-[2px] text-center mb-[5px] block italic">
           As you take photos with Nutrify, the Summary tab (paid feature) will
           populate automatically with stats and trends. You'll also be able to

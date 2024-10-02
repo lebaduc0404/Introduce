@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import { Logo } from "../../home/_component/Information";
+
 
 const Intro = () => {
   return (
@@ -7,7 +9,7 @@ const Intro = () => {
         <Link to="/">
           <img
             className="max-w-[200px] w-[100%] mx-auto block"
-            src="https://nutrify.app/nutrify-app-logo-with-text.png"
+            src={Logo}
             alt=""
           />
         </Link>
@@ -24,9 +26,7 @@ const Intro = () => {
         </p>
         <p className="mt-[1em] mb-[1em] block">This page sets out:</p>
         <ol className="list-decimal pl-6 space-y-[1px]">
-          <li className="pl-6">
-            information about registration and accounts;
-          </li>
+          <li className="pl-6">information about registration and accounts;</li>
           <li className="mt-[1em] mb-[1em] pl-6">
             the costs of the App, App subscription, cancellation, and our refund
             policy;

@@ -1,5 +1,6 @@
 import LogoDownload from "../../image/Download.png";
-import Logo from "../../image/Logo.png";
+import LogoShared from "../../image/Logo.png";
+export const Logo = LogoShared;
 
 const Information = () => {
   const LinkDownload = "";

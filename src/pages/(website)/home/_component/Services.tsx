@@ -38,7 +38,7 @@ const Services = () => {
             <h2 className="font-black text-[1.17em] font-helvetica">Contact</h2>
             <p>
               <a href={LinkEmail} className="text-blue-600 underline">
-                email
+                support@nutrify.app
               </a>
             </p>
           </div>

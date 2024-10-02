@@ -1,3 +1,4 @@
+import {ImageWork} from "../img";
 
 const Work = () => {
   return (
@@ -14,11 +15,9 @@ const Work = () => {
           It's bootstrapped in a converted lounge room office in Brisbane,
           Australia by myself and my brother Josh working together part-time.
         </p>
-        <img
-          className="mx-auto max-w-[100%] h-auto"
-          src="https://nutrify.app/images/03-nutrify-categories-example-whole-foods-focus.png"
-          alt=""
-        />
+
+        <img className="mx-auto max-w-[100%] h-auto" src={ImageWork} alt="" />
+        
         <p className="mt-[2px] text-center mb-[5px] block italic">
           A brief overview of how Nutrify works. One missing piece is the
           feedback loop that happens when Nutrify gets something wrong. We use

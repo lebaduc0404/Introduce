@@ -15,7 +15,7 @@ const UseWebsite = () => {
           Our website
           <Link to="/" className="text-blue-600 underline">
             {" "}
-            https://www.nutrify.app
+            foodtracker.karyalokal-studio.com.
           </Link>{" "}
           contains intellectual property (including copyright) owned by Craizy
           Pty Ltd trading as Craizy Studios and third parties
@@ -51,7 +51,7 @@ const UseWebsite = () => {
         <p className="mt-[1em] mb-[1em] block">
           When you come to our website
           <Link to="/" className="text-blue-600 underline">
-            https://www.nutrify.app
+            foodtracker.karyalokal-studio.com.
           </Link>{" "}
           we may collect certain information such as browser type, operating
           system, websites visited immediately before coming to our site, etc.
@@ -127,7 +127,7 @@ const UseWebsite = () => {
           If you are concerned about any reviews or comments, please contact us
           at
           <Link to={LinkSupport} className="text-blue-600 underline">
-            support@nutrify.app.
+            support@karyalokal-studio.com.
           </Link>
         </p>
 
@@ -213,7 +213,7 @@ const UseWebsite = () => {
           and refund policy, privacy policy or website terms and conditions,
           please contact us at
           <Link to={LinkSupport} className="text-blue-600 underline">
-            support@nutrify.app
+            support@foodtracker.app
           </Link>{" "}
           and we will endeavour to respond within 48 hours.
         </p>
@@ -227,7 +227,7 @@ const UseWebsite = () => {
           If you wish to make a complaint, please submit details of your
           complaint to{" "}
           <Link to={LinkSupport} className="text-blue-600 underline">
-            support@nutrify.app.
+            support@foodtracker.app.
           </Link>
         </p>
         <p className="mt-[1em] mb-[1em] block">

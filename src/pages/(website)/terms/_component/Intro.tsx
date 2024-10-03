@@ -37,7 +37,7 @@ const Intro = () => {
         <p className="mt-[1em] mb-[1em] block">
           If you access and use Nutrify, you are taken to have agreed to these
           terms and conditions. If you have any questions, please contact us on
-          support@nutrify.app.
+          support@karyalokal-studio.com.
         </p>
       </section>
     </>

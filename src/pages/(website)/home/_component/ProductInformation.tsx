@@ -107,7 +107,7 @@ const ProductInformation = () => {
 
   const visibleThumbnails = Math.min(10, img.length);
   const getVisibleThumbnails = () => {
-    if (window.innerWidth > 900 || img.length <= 5) {
+    if (window.innerWidth >= 800 || img.length <= 5) {
       return img;
     } else {
       const half = Math.floor(visibleThumbnails / 2);
@@ -158,7 +158,7 @@ const ProductInformation = () => {
 
               <div className="flex flex-col items-center">
                 <img
-                  className={`w-auto max-w-full h-auto max-h-[610px] relative transition-transform duration-300 ease-in-out transform 
+                  className={`w-auto max-w-full h-[100%] max-h-[610px] relative transition-transform duration-300 ease-in-out transform 
                     
                       ? "scale-95 opacity-75"
                       : "scale-100 opacity-100"
@@ -166,12 +166,9 @@ const ProductInformation = () => {
                   src={img[currentIndex]}
                   alt="Modal view"
                 />
-                <div className="flex w-[720px] gap-[12px] mt-5 justify-center overflow-hidden relative flex-shrink-0">
+                <div className="flex w-[720px] gap-[13px] mt-5 justify-center overflow-hidden relative flex-shrink-0">
                   {getVisibleThumbnails().map((thumbnail, index) => (
-                    <div
-                      key={index}
-                      className="max-w-[69px] w-[100%] max-h-[100px] h-[100%]"
-                    >
+                    <div key={index} className="w-auto max-h-[100px] h-[100%]">
                       <img
                         ref={(el) => (thumbnailRefs.current[index] = el)}
                         src={thumbnail}
@@ -191,13 +188,13 @@ const ProductInformation = () => {
               </div>
 
               <button
-                className="absolute left-0 text-white text-3xl w-[35px] h-[35px] flex items-center justify-center border-2 border-white rounded-full"
+                className="absolute left-2 text-white text-4xl max-w-[35px] w-[100%] max-h-[35px] h-[100%] flex items-center justify-center border-white rounded-full"
                 onClick={handleBack1}
               >
                 <div className="mb-[3.3px] mr-[3.3px]">&#10094;</div>
               </button>
               <button
-                className="absolute right-0 text-white text-3xl w-[35px] h-[35px] flex items-center justify-center border-2 border-white rounded-full"
+                className="absolute right-2 text-white text-4xl max-w-[35px] w-[100%] max-h-[35px] h-[100%] flex items-center justify-center border-white rounded-full"
                 onClick={handleNext1}
               >
                 <div className="mb-[3.3px] ml-[3.3px]">&#10095;</div>

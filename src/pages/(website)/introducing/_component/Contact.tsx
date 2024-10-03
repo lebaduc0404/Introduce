@@ -15,7 +15,7 @@ const Contact = () => {
         <p className="mt-[1em] mb-[1em] block">
           Our contact email is{" "}
           <Link to={LinkSupport} className="text-blue-600 underline">
-            support@nutrify.app.
+            support@karyalokal-studio.com.
           </Link>
         </p>
         <p className="mt-[1em] mb-[1em] block">

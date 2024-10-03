@@ -39,7 +39,7 @@ const Accounts = () => {
           notifications and App updates, by email (if you have subscribed), and
           our website at{" "}
           <Link to="/" className="text-blue-600 underline">
-            https://www.nutrify.app.
+            foodtracker.karyalokal-studio.com.
           </Link>
         </p>
         {/* ------------------------------------------------------------------- */}

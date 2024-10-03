@@ -22,10 +22,7 @@ const AppCosts = () => {
           However, Nutrify offers subscription-based access to premium features
           at USD 3.99/month (inc GST) or USD 24.99/year (inc GST). Please note
           these are base prices and may be subject to{" "}
-          <Link
-            to={Price}
-            className="text-blue-600 underline"
-          >
+          <Link to={Price} className="text-blue-600 underline">
             {" "}
             Apple's App Store price adjustments based on region.
           </Link>{" "}
@@ -81,12 +78,12 @@ const AppCosts = () => {
           If you have any questions regarding your subscription or the App,
           please contact us at{" "}
           <Link to={LinkSupport} className="text-blue-600 underline">
-            support@nutrify.app
+            support@karyalokal-studio.com
           </Link>{" "}
           or through our website{" "}
           <Link to="/" className="text-blue-600 underline">
             {" "}
-            https://www.nutrify.app.
+            foodtracker.karyalokal-studio.com.
           </Link>
         </p>
         <p className="mt-[1em] mb-[1em] block">

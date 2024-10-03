@@ -18,17 +18,13 @@ const Information = () => {
               Food Tracker - Calorie Scanner
             </h2>
             <h2 className="text-[1.3em] font-helvetica text-left font-black my-[0.83em]">
-              Food Tracker - Calorie Scanner: Your ultimate companion for
-              mastering nutrition, achieving fitness milestones and realizing
-              your ideal weight goals
+              SHORT DESCRIPTION
             </h2>
             <div className="my-[1em] block">
-              {/* -------------------------------------- */}
-              <p className="text-left">
-                <b>5+ Key Features of Food Tracker - Calorie Scanner:</b>
-              </p>
-              {/* -------------------------------------- */}
               <div className="text-left my-[0.83em]">
+                <p>
+                  <b>5+ Key Features of Food Tracker - Calorie Scanner:</b>
+                </p>
                 <p>
                   ✅ Personalized plans tailored to your objectives and optimal
                   weight.
@@ -119,20 +115,24 @@ const Information = () => {
                   👉Health-conscious individuals prioritizing wholesome eating
                   habits
                 </p>
-                <p className="text-left my-[0.83em]">
+                <p className="text-left my-[0.83em] text-[18px] bg-yellow-100 font-bold p-2">
                   Download Food Tracker - Calorie Scanner today. Choose your
                   plan, stay consistent, and achieve your ideal goal.
                 </p>
               </div>
             </div>
           </div>
-          <Link to={LinkDownload}>
-            <img
-              className="max-w-[200px] w-[auto] mx-auto block h-[54px]"
-              src={LogoDownload}
-              alt="Ảnh lỗi"
-            />
-          </Link>
+          <div className="flex justify-center items-center h-[54px]">
+            <div className="max-w-[200px] w-[auto] h-[54px]">
+              <Link to={LinkDownload} className="">
+                <img
+                  className="max-w-[200px] w-[auto] mx-auto block h-[54px]"
+                  src={LogoDownload}
+                  alt="Ảnh lỗi"
+                />
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
     </>

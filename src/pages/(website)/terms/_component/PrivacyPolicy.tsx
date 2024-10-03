@@ -136,7 +136,7 @@ const PrivacyPolicy = () => {
           your personal information to protect the copyright, trademarks, legal
           rights, property, or safety of Craizy Studios, Nutrify,
           <Link to="/" className="text-blue-600 underline">
-            https://www.nutrify.app
+            foodtracker.karyalokal-studio.com.
           </Link>
           , our customers or third parties.
         </p>
@@ -192,7 +192,7 @@ const PrivacyPolicy = () => {
           by emailing us at{" "}
           <Link to={LinkSupport} className="text-blue-600 underline">
             {" "}
-            support@nutrify.app.
+            support@karyalokal-studio.com.
           </Link>
         </p>
         <p className="mt-[1em] mb-[1em] block">

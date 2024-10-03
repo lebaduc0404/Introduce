@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { LinkSupport } from "../../introducing/Link";
+import { LinkSupport } from "../../Img_Link";
 
 const PrivacyPolicy = () => {
     useEffect(() => {

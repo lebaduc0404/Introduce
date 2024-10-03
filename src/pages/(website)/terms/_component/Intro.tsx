@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
-import { Logo } from "../../home/_component/Information";
-
+import { Logo } from "../../Img_Link";
 
 const Intro = () => {
   return (

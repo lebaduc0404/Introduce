@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { LinkDownload } from "../../introducing/Link";
+import { LinkDownload } from "../../Img_Link";
 
 const Accounts = () => {
   return (

@@ -1,4 +1,4 @@
-import { LinkDownload, LinkInstagram, LinkSupport, LinkTikTok, LinkX } from "@/pages/(website)/introducing/Link";
+import { LinkDownload, LinkInstagram, LinkSupport, LinkTikTok, LinkX } from "@/pages/(website)/Img_Link";
 import { Link } from "react-router-dom";
 
 const Feedback = () => {

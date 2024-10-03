@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { ImageIntro } from "../img";
-import { Logo } from "../../home/_component/Information";
-import { LinkDownload } from "../../introducing/Link";
+import { LinkDownload, Logo } from "../../Img_Link";
 
 
 const Intro = () => {

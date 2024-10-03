@@ -1,32 +1,19 @@
 import React, { useEffect, useRef, useState } from "react";
 
-import Slide0 from "../../image/Slide-0.png";
-import Slide1 from "../../image/Slide-1.png";
-import Slide2 from "../../image/Slide-2.png";
-import Slide3 from "../../image/Slide-3.png";
-import Slide4 from "../../image/Slide-4.png";
-import Slide5 from "../../image/Slide-5.png";
-import Slide6 from "../../image/Slide-6.png";
-import Slide7 from "../../image/Slide-7.png";
-import Slide8 from "../../image/Slide-8.png";
+import Slide0 from "../../image/ScreenShoot/1.jpg";
+import Slide1 from "../../image/ScreenShoot/2.jpg";
+import Slide2 from "../../image/ScreenShoot/3.jpg";
+import Slide3 from "../../image/ScreenShoot/4.jpg";
+import Slide4 from "../../image/ScreenShoot/5.jpg";
+import Slide5 from "../../image/ScreenShoot/6.jpg";
+import Slide6 from "../../image/ScreenShoot/7.jpg";
+import Slide7 from "../../image/ScreenShoot/8.jpg";
 
-const img = [
-  Slide0,
-  Slide1,
-  Slide2,
-  Slide3,
-  Slide4,
-  Slide5,
-  Slide6,
-  Slide7,
-  Slide8,
-];
+const img = [Slide0, Slide1, Slide2, Slide3, Slide4, Slide5, Slide6, Slide7];
 
 const ProductInformation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isTransitioning, setIsTransitioning] = useState(false); // Transition state
-
   let startX = 0;
   let isDragging = false;
 
@@ -40,24 +27,19 @@ const ProductInformation = () => {
   };
 
   const handleNext1 = () => {
-    if (isTransitioning) return;
-    setIsTransitioning(true);
     setCurrentIndex(
       (prevIndex) =>
         (prevIndex === img.length - 1 ? 0 : prevIndex + 1) % img.length
     );
-    setIsTransitioning(false);
   };
 
   const handleBack1 = () => {
-    if (isTransitioning) return;
-    setIsTransitioning(true);
     setCurrentIndex((prevIndex) =>
       prevIndex === 0 ? img.length - 1 : prevIndex - 1
     );
-    setIsTransitioning(false);
   };
 
+  // Xử lý sự kiện vuốt đổi ảnh
   const handleStart = (e: React.TouchEvent | React.MouseEvent) => {
     startX =
       e.type === "touchstart"
@@ -82,6 +64,7 @@ const ProductInformation = () => {
     }
   };
 
+  // useEffect để lắng nghe sự kiện nhấn phím next back bàn phím
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "ArrowRight") {
@@ -100,29 +83,44 @@ const ProductInformation = () => {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [isOpen]);
 
-  const thumbnailRefs = useRef<(HTMLImageElement | null)[]>([]);
+  // useEffect để lắng nghe sự kiện nhấn phím Esc
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setIsOpen(false);
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [isOpen]);
 
   const handleThumbnailClick = (index: number) => {
     setCurrentIndex(index);
   };
 
+  // Xử lý ảnh thumb với các màn khác nhau
+  const thumbnailRefs = useRef<(HTMLImageElement | null)[]>([]);
+
   const visibleThumbnails = Math.min(10, img.length);
-   const getVisibleThumbnails = () => {
-     if (window.innerWidth > 900 || img.length <= 5) {
-       return img;
-     } else {
-       const half = Math.floor(visibleThumbnails / 2);
-       const start = Math.max(currentIndex - half, 0);
-       const end = Math.min(currentIndex + half, img.length - 1);
-      //  return img.slice(start, end + 1);
-       return img.slice(start, end + 1).slice(0, 5);
-     }
-   };
+  const getVisibleThumbnails = () => {
+    if (window.innerWidth > 900 || img.length <= 5) {
+      return img;
+    } else {
+      const half = Math.floor(visibleThumbnails / 2);
+      const start = Math.max(currentIndex - half, 0);
+      const end = Math.min(currentIndex + half, img.length - 1);
+      return img.slice(start, end + 1).slice(0, 5);
+    }
+  };
 
   return (
     <>
       <section className="">
-        <div className="w-[100%] max-w-[1503px] mx-auto relative overflow-hidden px-10 mt-[20px]">
+        <div className="w-[100%] max-w-[1503px] mx-auto relative overflow-hidden mt-[20px]">
           <div className="w-[100%] max-w-[1000px] h-auto flex-shrink-0 flex-grow-0 flex-auto flex gap-[10px] overflow-x-auto scroll-smooth no-scrollbar">
             {img.map((img, index) => (
               <a
@@ -160,8 +158,8 @@ const ProductInformation = () => {
 
               <div className="flex flex-col items-center">
                 <img
-                  className={`w-auto max-w-full h-auto max-h-[610px] relative transition-transform duration-300 ease-in-out transform ${
-                    isTransitioning
+                  className={`w-auto max-w-full h-auto max-h-[610px] relative transition-transform duration-300 ease-in-out transform 
+                    
                       ? "scale-95 opacity-75"
                       : "scale-100 opacity-100"
                   }`}
@@ -178,7 +176,7 @@ const ProductInformation = () => {
                         ref={(el) => (thumbnailRefs.current[index] = el)}
                         src={thumbnail}
                         alt=""
-                        className={`max-w-[69px] w-[100%] max-h-[100px] h-[100%] cursor-pointer transition-all duration-300 ${
+                        className={`w-auto max-h-[100px] h-[100%] cursor-pointer transition-all duration-300 ${
                           thumbnail === img[currentIndex]
                             ? "border-4 border-white opacity-100"
                             : "opacity-50"
@@ -193,13 +191,13 @@ const ProductInformation = () => {
               </div>
 
               <button
-                className="absolute left-2 text-white text-3xl w-[38px] h-[38px] flex items-center justify-center border-2 border-white rounded-full"
+                className="absolute left-0 text-white text-3xl w-[35px] h-[35px] flex items-center justify-center border-2 border-white rounded-full"
                 onClick={handleBack1}
               >
                 <div className="mb-[3.3px] mr-[3.3px]">&#10094;</div>
               </button>
               <button
-                className="absolute right-2 text-white text-3xl w-[38px] h-[38px] flex items-center justify-center border-2 border-white rounded-full"
+                className="absolute right-0 text-white text-3xl w-[35px] h-[35px] flex items-center justify-center border-2 border-white rounded-full"
                 onClick={handleNext1}
               >
                 <div className="mb-[3.3px] ml-[3.3px]">&#10095;</div>

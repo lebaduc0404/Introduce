@@ -1,21 +1,10 @@
 import { Link } from "react-router-dom";
-import LogoDownload from "../../image/Download.png";
-import LogoShared from "../../image/Logo.png";
-import { LinkDownload } from "../../introducing/Link";
-export const Logo = LogoShared;
+import { LinkDownload, Logo, LogoDownload } from "../../Img_Link";
 
 const Information = () => {
-  const text = [
-    "📸 Identify 470+ foods with your camera.",
-    "📊 Track whole food calories and nutrition.",
-    "🏆 Set food-specifc and category-specific goals.",
-    "📔 Create a visual food diary.",
-    "📈 Get trends overtime and learn about your food habits.",
-    "🔎 Discover new foods on your way to completing the Nutridex.",
-  ];
   return (
     <>
-      <section>
+      <section className="max-w-[1000px] w-[100%]">
         <div className="text-center">
           <div>
             <img
@@ -25,15 +14,116 @@ const Information = () => {
             />
           </div>
           <div className="">
-            <h2 className="text-[1.5em] font-helvetica font-black my-[0.83em]">
-              🥑 Whole food nutrition and calorie tracker.
+            <h2 className="text-[1.8em] font-helvetica font-black my-[0.83em]">
+              Food Tracker - Calorie Scanner
+            </h2>
+            <h2 className="text-[1.3em] font-helvetica text-left font-black my-[0.83em]">
+              Food Tracker - Calorie Scanner: Your ultimate companion for
+              mastering nutrition, achieving fitness milestones and realizing
+              your ideal weight goals
             </h2>
             <div className="my-[1em] block">
-              {text.map((item, index) => (
-                <p key={index} className="">
-                  {item}
+              {/* -------------------------------------- */}
+              <p className="text-left">
+                <b>5+ Key Features of Food Tracker - Calorie Scanner:</b>
+              </p>
+              {/* -------------------------------------- */}
+              <div className="text-left my-[0.83em]">
+                <p>
+                  ✅ Personalized plans tailored to your objectives and optimal
+                  weight.
                 </p>
-              ))}
+                <p>
+                  ✅ Instant food scanning for precise nutrition and calorie
+                  insights.
+                </p>
+                ✅ Track weight fluctuations, maintain a detailed diary and
+                access motivating statistics.
+                <p>
+                  ✅ Effortlessly monitor calories, food intake and vital
+                  statistics with alerts for excessive consumption.
+                </p>
+                <p>
+                  ✅ Stay hydrated with water intake tracking and timely
+                  reminders.
+                </p>
+                <p>
+                  ✅ Track weight fluctuations, maintain a detailed diary and
+                  access motivating statistics.
+                </p>
+              </div>
+              {/* -------------------------------------- */}
+              <div className="text-left my-[0.83em]">
+                <p>
+                  🎯<b>Set Personal Goals with Precision</b>
+                </p>
+                <p>
+                  This app creates personalized plans tailored to your needs and
+                  objectives, supporting you in achieving your ideal weight or
+                  muscle-building goals.
+                </p>
+              </div>
+              {/* -------------------------------------- */}
+              <div className="text-left my-[0.83em]">
+                <p>
+                  🥦<b>Nutritional Empowerment at Your Fingertips</b>
+                </p>
+                <p>
+                  Unlock the power of food scanning for detailed calorie and
+                  nutrition breakdowns. Fulfill your daily requirements with
+                  ease and precision.
+                </p>
+              </div>
+              {/* -------------------------------------- */}
+              <div className="text-left my-[0.83em]">
+                <p>
+                  📊<b>Track Calories, Food Diary and Statistics</b>
+                </p>
+                <p>
+                  Document your calorie journey, food preferences and visual
+                  records. Receive timely alerts for exceeding daily limits,
+                  propelling you towards success.
+                </p>
+              </div>
+              {/* -------------------------------------- */}
+              <div className="text-left my-[0.83em]">
+                <p>
+                  💧<b>Monitor Water Intake</b>
+                </p>
+                <p>
+                  Maintain optimal hydration levels effortlessly. Track your
+                  water intake, receive reminders and revel in the freshness
+                  that comes with meeting your hydration goals
+                </p>
+              </div>
+              {/* -------------------------------------- */}
+              <div className="text-left my-[0.83em]">
+                <p>
+                  🏋🏻‍♂️<b>Track Weight, Weight Diary and Statistics</b>
+                </p>
+                <p>
+                  Record weight changes, maintain a dedicated diary and delve
+                  into insightful statistics. Let our app be your constant
+                  companion in achieving and sustaining your goals.
+                </p>
+              </div>
+              {/* -------------------------------------- */}
+              <div className="text-left my-[0.83em]">
+                <p>
+                  <b>Food Tracker - Calorie Counter Ideal for:</b>
+                </p>
+                <p>👉Individuals aiming to gain weight</p>
+                <p>👉Those looking to lose weight</p>
+                <p>👉Fitness enthusiasts seeking muscle growth</p>
+                <p>
+                  👉Health-conscious individuals prioritizing wholesome eating
+                  habits
+                </p>
+                <p className="text-left my-[0.83em]">
+                  Download Food Tracker - Calorie Scanner today. Choose your
+                  plan, stay consistent, and achieve your ideal goal.
+                </p>
+              </div>
             </div>
           </div>
           <Link to={LinkDownload}>

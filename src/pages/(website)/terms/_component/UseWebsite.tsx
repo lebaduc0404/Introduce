@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { LinkSupport } from "../../introducing/Link";
+import { LinkSupport } from "../../Img_Link";
 
 const UseWebsite = () => {
   return (

@@ -1,9 +1,7 @@
 import { Link } from "react-router-dom";
-import { Logo } from "../../home/_component/Information";
 import { ImageOverview } from "../img";
 import { LinkProduct } from "../Link";
-import { LinkVideo } from "../Link";
-import { LinkDownload } from "../Link";
+import { LinkDownload, LinkVideo, Logo } from "../../Img_Link";
 
 const ShortVersion = () => {
   return (

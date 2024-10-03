@@ -1,12 +1,3 @@
-// Các đường link chung
-export const LinkSupport = "";
-export const LinkDownload =
-  "https://apps.apple.com/us/app/nutrify-whole-food-tracker/id1664020890?itscg=30200&itsct=apps_box_link";
-export const LinkInstagram = "https://www.instagram.com/nutrifyfoodapp/";
-export const LinkTikTok = "https://www.tiktok.com/@nutrifyfoodapp";
-export const LinkX = "https://x.com/nutrifyfoodapp?mx=2";
-export const LinkVideo = "https://www.youtube.com/watch?v=-jpLqtAWKfo";
-
 //Link phần Longer Version
 export const LinkAi = "https://www.mrdbourke.com/aimastersdegree/";
 export const LinkDiet = "https://en.wikipedia.org/wiki/Western_pattern_diet";

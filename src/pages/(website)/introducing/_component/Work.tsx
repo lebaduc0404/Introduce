@@ -4,10 +4,10 @@ import { LinkData } from "../Link";
 import { LinkModulsTimm } from "../Link";
 import { LinkModulsHuggingFace } from "../Link";
 import { LinkWeightsBiases } from "../Link";
-import { LinkVideo } from "../Link";
 import { LinkFDC } from "../Link";
 import { LinkFSANZ } from "../Link";
 import { LinkSupabase } from "../Link";
+import { LinkVideo } from "../../Img_Link";
 
 const Work = () => {
   return (

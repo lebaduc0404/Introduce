@@ -1,9 +1,5 @@
 import { Link } from "react-router-dom";
-import { LinkSupport } from "../Link";
-import { LinkDownload } from "../Link";
-import { LinkInstagram } from "../Link";
-import { LinkTikTok } from "../Link";
-import { LinkX } from "../Link";
+import { LinkDownload, LinkInstagram, LinkSupport, LinkTikTok, LinkX } from "../../Img_Link";
 
 const Contact = () => {
   return (

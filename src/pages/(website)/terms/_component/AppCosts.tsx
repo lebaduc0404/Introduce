@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import { LinkDownload, LinkSupport, Price } from "../../introducing/Link";
+import { Price } from "../../introducing/Link";
+import { LinkDownload, LinkSupport } from "../../Img_Link";
 
 const AppCosts = () => {
   return (

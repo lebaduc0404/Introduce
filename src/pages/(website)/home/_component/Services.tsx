@@ -35,8 +35,8 @@ const Services = () => {
                 className="text-blue-600 underline"
                 onClick={() => window.scrollTo({ top: 0 })}
               >
-                Introducing Nutrify 1.2: Calorie and Macronutrient Goals,
-                Breakdowns and 57 New Foods
+                Introducing Food Tracker - Calorie Scanner: Diet Food Recipe
+                Counter for Fitness. Health Fasting Meal Planning & Water Diary
               </Link>
             </p>
           </div>

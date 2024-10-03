@@ -188,13 +188,13 @@ const ProductInformation = () => {
               </div>
 
               <button
-                className="absolute left-2 text-white text-4xl max-w-[35px] w-[100%] max-h-[35px] h-[100%] flex items-center justify-center border-white rounded-full"
+                className="absolute left-0 text-white text-4xl max-w-[35px] w-[100%] max-h-[35px] h-[100%] flex items-center justify-center border-white rounded-full"
                 onClick={handleBack1}
               >
                 <div className="mb-[3.3px] mr-[3.3px]">&#10094;</div>
               </button>
               <button
-                className="absolute right-2 text-white text-4xl max-w-[35px] w-[100%] max-h-[35px] h-[100%] flex items-center justify-center border-white rounded-full"
+                className="absolute right-0 text-white text-4xl max-w-[35px] w-[100%] max-h-[35px] h-[100%] flex items-center justify-center border-white rounded-full"
                 onClick={handleNext1}
               >
                 <div className="mb-[3.3px] ml-[3.3px]">&#10095;</div>

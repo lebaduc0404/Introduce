@@ -17,6 +17,40 @@ const ProductInformation = () => {
   let startX = 0;
   let isDragging = false;
 
+
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const [atStart, setAtStart] = useState(true);
+  const [atEnd, setAtEnd] = useState(true);
+  const handleNext = () => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollBy({ left: 230, behavior: "smooth" });
+    }
+  };
+  const handleBack = () => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollBy({ left: -230, behavior: "smooth" });
+    }
+  };
+
+  const checkScrollPosition = () => {
+    if (scrollRef.current) {
+      const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
+      setAtStart(scrollLeft === 0);
+      setAtEnd(scrollLeft + clientWidth >= scrollWidth);
+    }
+  };
+  useEffect(() => {
+    if (scrollRef.current) {
+      scrollRef.current.addEventListener("scroll", checkScrollPosition);
+    }
+    checkScrollPosition();
+    return () => {
+      if (scrollRef.current) {
+        scrollRef.current.removeEventListener("scroll", checkScrollPosition);
+      }
+    };
+  }, []);
+
   const openModal = (index: number) => {
     setCurrentIndex(index);
     setIsOpen(true);
@@ -121,7 +155,10 @@ const ProductInformation = () => {
     <>
       <section className="">
         <div className="w-[100%] max-w-[1503px] mx-auto relative overflow-hidden mt-[20px]">
-          <div className="w-[100%] max-w-[1000px] h-auto flex-shrink-0 flex-grow-0 flex-auto flex gap-[10px] overflow-x-auto scroll-smooth no-scrollbar">
+          <div
+            ref={scrollRef}
+            className="w-[100%] max-w-[1000px] h-auto flex-shrink-0 flex-grow-0 flex-auto flex gap-[10px] overflow-x-auto scroll-smooth no-scrollbar"
+          >
             {img.map((img, index) => (
               <a
                 href={img}
@@ -140,6 +177,22 @@ const ProductInformation = () => {
               </a>
             ))}
           </div>
+          {!atStart && (
+            <button
+              onClick={handleBack}
+              className="left-0 absolute top-[50%] p-[5px] text-3xl cursor-pointer text-black transform -translate-y-1/2 z-100"
+            >
+              <div className="mb-[3.3px] mr-[3.3px]">&#10094;</div>
+            </button>
+          )}
+          {!atEnd && (
+            <button
+              onClick={handleNext}
+              className="right-0 absolute top-[50%] p-[5px] text-3xl cursor-pointer text-black transform -translate-y-1/2 z-100"
+            >
+              <div className="mb-[3.3px] ml-[3.3px]">&#10095;</div>
+            </button>
+          )}
           {isOpen && (
             <div
               className="fixed inset-0 bg-black bg-opacity-90 flex justify-center items-center z-50"
@@ -158,7 +211,7 @@ const ProductInformation = () => {
 
               <div className="flex flex-col items-center">
                 <img
-                  className={`w-auto max-w-full h-[100%] max-h-[610px] relative transition-transform duration-300 ease-in-out transform 
+                  className={`w-auto max-w-full h-[100%] max-h-[580px] relative transition-transform duration-300 ease-in-out transform 
                     
                       ? "scale-95 opacity-75"
                       : "scale-100 opacity-100"

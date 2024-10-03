@@ -17,8 +17,17 @@ const Information = () => {
             <h2 className="text-[1.8em] font-helvetica font-black my-[0.83em]">
               Food Tracker - Calorie Scanner
             </h2>
+            <div className="text-left my-[0.83em]">
+              <h2 className="text-[1.3em] font-helvetica text-left font-black my-[0.83em]">
+                SHORT DESCRIPTION
+              </h2>
+              <p>
+                Diet Food Recipe Counter for Fitness. Health Fasting Meal
+                Planning & Water Diary
+              </p>
+            </div>
             <h2 className="text-[1.3em] font-helvetica text-left font-black my-[0.83em]">
-              SHORT DESCRIPTION
+              LONG DESCRIPTION
             </h2>
             <div className="my-[1em] block">
               <div className="text-left my-[0.83em]">
@@ -33,8 +42,6 @@ const Information = () => {
                   ✅ Instant food scanning for precise nutrition and calorie
                   insights.
                 </p>
-                ✅ Track weight fluctuations, maintain a detailed diary and
-                access motivating statistics.
                 <p>
                   ✅ Effortlessly monitor calories, food intake and vital
                   statistics with alerts for excessive consumption.
@@ -115,7 +122,7 @@ const Information = () => {
                   👉Health-conscious individuals prioritizing wholesome eating
                   habits
                 </p>
-                <p className="text-left my-[0.83em] text-[18px] bg-yellow-100 font-bold p-2">
+                <p className="text-left my-[0.83em] text-[18px] bg-[#66CC99] font-bold p-4 border-2 border-yellow-400 rounded-lg shadow-lg transition duration-300">
                   Download Food Tracker - Calorie Scanner today. Choose your
                   plan, stay consistent, and achieve your ideal goal.
                 </p>

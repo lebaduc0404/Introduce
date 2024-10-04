@@ -34,7 +34,7 @@ const Detail = () => {
       <h3 className="font-extrabold text-[1.2em] mb-2 font-helvetica">
         {post.title}
       </h3>
-      <h3 className="font-bold text-[1em] font-helvetica">Nội dung ngắn</h3>
+      <h3 className="font-bold text-[1em] font-helvetica">Short Content</h3>
       {(Array.isArray(post.shortContent)
         ? post.shortContent
         : [post.shortContent]
@@ -43,7 +43,7 @@ const Detail = () => {
           <div className="ml-[1.3em] mb-[0.6em]">{item}</div>
         </span>
       ))}
-      <h3 className="font-bold text-[1em] mt-3 font-helvetica">Nội dung dài</h3>
+      <h3 className="font-bold text-[1em] mt-3 font-helvetica">Long Content</h3>
       {(Array.isArray(post.longContent)
         ? post.longContent
         : [post.longContent]

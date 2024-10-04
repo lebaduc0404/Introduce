@@ -1,8 +1,10 @@
-export const data = [
+import { IPosts } from "@/common/types/IPosts";
+
+export const data: IPosts[] = [
   {
     id: 1,
     title: "Whole food nutrition and calorie tracker",
-    shortContent: "🥑 Whole food nutrition and calorie tracker.",
+    shortContent: ["🥑 Whole food nutrition and calorie tracker."],
     longContent: [
       "📸 Identify 470+ foods with your camera.",
       "📊 Track whole food calories and nutrition.",
@@ -19,7 +21,7 @@ export const data = [
   {
     id: 2,
     title: "Track your daily nutrition effortlessly",
-    shortContent: "🍏 Track your daily nutrition effortlessly.",
+    shortContent: ["🍏 Track your daily nutrition effortlessly."],
     longContent: [
       "📖 Log your meals and snacks quickly.",
       "🔔 Get reminders for your meals.",
@@ -36,7 +38,7 @@ export const data = [
   {
     id: 3,
     title: "Achieve your fitness goals with our app",
-    shortContent: "🌟 Achieve your fitness goals with our app.",
+    shortContent: ["🌟 Achieve your fitness goals with our app."],
     longContent: [
       "💡 Get expert tips on nutrition and fitness.",
       "🏃‍♂️ Track your workouts alongside your meals.",
@@ -53,7 +55,7 @@ export const data = [
   {
     id: 4,
     title: "Your all-in-one food and fitness tracker",
-    shortContent: "🍽️ Your all-in-one food and fitness tracker.",
+    shortContent: ["🍽️ Your all-in-one food and fitness tracker."],
     longContent: [
       "🌐 Connect with a community of health enthusiasts.",
       "📚 Access a library of articles on nutrition and wellness.",
@@ -70,7 +72,7 @@ export const data = [
   {
     id: 5,
     title: "Meal planning made simple",
-    shortContent: "🥗 Meal planning made simple.",
+    shortContent: ["🥗 Meal planning made simple."],
     longContent: [
       "📅 Create a weekly meal schedule effortlessly.",
       "🛒 Generate a shopping list based on your meals.",
@@ -87,7 +89,7 @@ export const data = [
   {
     id: 6,
     title: "Focus on wellness and balance",
-    shortContent: "🧘‍♂️ Focus on wellness and balance.",
+    shortContent: ["🧘‍♂️ Focus on wellness and balance."],
     longContent: [
       "💆‍♀️ Explore meditation and relaxation techniques.",
       "📖 Read articles on mental health and wellness.",
@@ -104,7 +106,7 @@ export const data = [
   {
     id: 7,
     title: "Satisfy your sweet tooth healthily",
-    shortContent: "🍰 Satisfy your sweet tooth healthily.",
+    shortContent: ["🍰 Satisfy your sweet tooth healthily."],
     longContent: [
       "🍫 Discover healthier dessert recipes.",
       "🥕 Learn to bake with whole ingredients.",
@@ -121,7 +123,7 @@ export const data = [
   {
     id: 8,
     title: "Understanding food labels",
-    shortContent: "🍽️ Understanding food labels.",
+    shortContent: ["🍽️ Understanding food labels."],
     longContent: [
       "🔍 Learn how to read and interpret nutrition labels.",
       "⚖️ Understand serving sizes and portion control.",
@@ -138,7 +140,7 @@ export const data = [
   {
     id: 9,
     title: "The benefits of plant-based eating",
-    shortContent: "🌿 The benefits of plant-based eating.",
+    shortContent: ["🌿 The benefits of plant-based eating."],
     longContent: [
       "🥦 Discover the health benefits of a plant-based diet.",
       "🍇 Learn to prepare delicious plant-based meals.",
@@ -155,7 +157,7 @@ export const data = [
   {
     id: 10,
     title: "BTracking your food intake effectively",
-    shortContent: "📊 Tracking your food intake effectively.",
+    shortContent: ["📊 Tracking your food intake effectively."],
     longContent: [
       "📖 Learn how to log your food accurately.",
       "📱 Use our app for seamless tracking.",
@@ -172,7 +174,7 @@ export const data = [
   {
     id: 11,
     title: "Hydration for health and wellness",
-    shortContent: "🍉 Hydration for health and wellness.",
+    shortContent: ["🍉 Hydration for health and wellness."],
     longContent: [
       "💧 Understand the importance of hydration.",
       "🥤 Discover creative ways to increase your water intake.",
@@ -189,7 +191,7 @@ export const data = [
   {
     id: 12,
     title: "Discover the power of protein",
-    shortContent: "🍗 Discover the power of protein.",
+    shortContent:[ "🍗 Discover the power of protein."],
     longContent: [
       "🍳 Learn about different sources of protein.",
       "💪 Understand the role of protein in muscle building.",

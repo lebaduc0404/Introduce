@@ -1,38 +1,28 @@
 import { Link, useNavigate } from "react-router-dom";
 import { LinkSupport } from "../../Img_Link";
 import { useEffect, useState } from "react";
-import instance from "@/config/axios";
+import { data } from "@/pages/(website)/post/Data";
 import { IPosts } from "@/common/types/IPosts";
 
 const Services = () => {
-  const [data, setData] = useState<IPosts[]>([]);
-  const navigate = useNavigate();
+   const [sortedData, setSortedData] = useState<IPosts[]>([]);
+   const navigate = useNavigate();
 
-  const API = async () => {
-    try {
-      const response = await instance.get<IPosts[]>("/posts");
-      // Sắp xếp bài viết theo createdAt giảm dần và lấy 3 bài viết đầu tiên
-      const sortedData = response.data
-        .sort((a, b) => {
-          return (
-            new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
-          );
-        })
-        .slice(0, 3);
+   useEffect(() => {
+     // Sort posts by createdAt in descending order and take the first 3
+     const updatedData = data
+       .sort(
+         (a, b) =>
+           new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
+       )
+       .slice(0, 3);
 
-      setData(sortedData); // Cập nhật state với 3 bài viết gần nhất
-    } catch (error) {
-      console.error("Error fetching data:", error);
-    }
-  };
+     setSortedData(updatedData);
+   }, []);
 
-  useEffect(() => {
-    API();
-  }, []);
-
-  const handleRowClick = (id: number | string) => {
-    navigate(`/post/${id}`);
-  };
+   const handleRowClick = (id: number | string) => {
+     navigate(`/post/${id}`);
+   };
   return (
     <>
       <section className="services">
@@ -47,7 +37,7 @@ const Services = () => {
               </tr>
             </thead>
             <tbody>
-              {data.map((item, index) => (
+              {sortedData.map((item, index) => (
                 <tr
                   key={item.id}
                   onClick={() => handleRowClick(item.id)}

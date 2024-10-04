@@ -1,30 +1,12 @@
-import { IPosts } from "@/common/types/IPosts";
-import instance from "@/config/axios";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { data } from "@/pages/(website)/post/Data";
 
 const ListPost = () => {
-  const [data, setData] = useState<IPosts[]>([]);
+  // const [data, setData] = useState<IPosts[]>([]);
   const [currentPage, setCurrentPage] = useState(1); // Trang hiện tại
   const [postsPerPage] = useState(10); // Số bài viết mỗi trang
   const navigate = useNavigate();
-
-  const fetchPosts = async () => {
-    try {
-      const response = await instance.get<IPosts[]>("/posts");
-      const Data = response.data.sort(
-        (a, b) =>
-          new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
-      );
-      setData(Data);
-    } catch (error) {
-      console.error("Error fetching data:", error);
-    }
-  };
-
-  useEffect(() => {
-    fetchPosts();
-  }, []);
 
   // Tính toán các bài viết hiển thị cho trang hiện tại
   const indexOfLastPost = currentPage * postsPerPage;

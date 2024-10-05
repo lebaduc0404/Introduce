@@ -42,7 +42,7 @@ const Services = () => {
             </span>
             // </div>
           ))}
-          {/* <Link to="blog">
+          {/* <Link to="/list/blog">
             <button className="btn btn-secondary justify-center items-center mt-2">
               More
             </button>

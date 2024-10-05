@@ -54,12 +54,9 @@ const Services = () => {
         </div>
         <div className="my-[1em]">
           <h2 className="font-black text-[1.17em] font-helvetica">Contact</h2>
-          {/* <p className="text-blue-600 underline">
+          <p className="text-blue-600 underline">
             support@karyalokal-studio.com
-          </p> */}
-          <a href="mailto:support@karyalokal-studio.com">
-            Gửi email tới Hỗ trợ Gmail
-          </a>
+          </p>
         </div>
         <div>
           <h2 className="font-black text-[1.17em] font-helvetica">Legal</h2>

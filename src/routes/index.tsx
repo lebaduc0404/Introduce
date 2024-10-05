@@ -14,8 +14,9 @@ const Router = () => {
         <Route path="/launch" element={<IntroducingPage />} />
         <Route path="/new" element={<IntroducingNewPage />} />
         <Route path="/terms" element={<Terms />} />
-        <Route path="/post" element={<ListPost />} />
-        <Route path="/post/:id" element={<Detail />} />
+        <Route path="/post" element={<ListPost />}>
+          <Route path=":id" element={<Detail />} />
+        </Route>
       </Routes>
     </div>
   );

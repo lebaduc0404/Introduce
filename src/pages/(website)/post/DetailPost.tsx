@@ -4,7 +4,6 @@ import { Logo } from "../Img_Link";
 
 const Detail = () => {
   const { id } = useParams<{ id: string }>();
-  console.log(id);
   
   const post = data.find((item) => item.id.toString() === id);
 

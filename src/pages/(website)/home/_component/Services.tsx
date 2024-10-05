@@ -20,6 +20,10 @@ const Services = () => {
     setSortedData(updatedData);
   }, []);
 
+  const handleSupportClick = () => {
+    window.open("mailto:support@karyalokal-studio.com");
+  };
+
   //  const handleRowClick = (id: number | string) => {
   //    navigate(`/detailblog/${id}`);
   //  };
@@ -54,9 +58,15 @@ const Services = () => {
         </div>
         <div className="my-[1em]">
           <h2 className="font-black text-[1.17em] font-helvetica">Contact</h2>
-          <p className="text-blue-600 underline">
+          {/* <p className="text-blue-600 underline">
             support@karyalokal-studio.com
-          </p>
+          </p> */}
+          <button
+            onClick={handleSupportClick}
+            className="text-blue-600 underline"
+          >
+            support@karyalokal-studio.com
+          </button>
         </div>
         <div>
           <h2 className="font-black text-[1.17em] font-helvetica">Legal</h2>

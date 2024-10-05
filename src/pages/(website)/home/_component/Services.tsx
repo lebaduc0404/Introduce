@@ -1,4 +1,5 @@
-import { Link, useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
+import { Link} from "react-router-dom";
 import { LinkSupport } from "../../Img_Link";
 import { useEffect, useState } from "react";
 import { data } from "@/pages/(website)/post/Data";
@@ -6,7 +7,7 @@ import { IPosts } from "@/common/types/IPosts";
 
 const Services = () => {
    const [sortedData, setSortedData] = useState<IPosts[]>([]);
-   const navigate = useNavigate();
+  //  const navigate = useNavigate();
   
    useEffect(() => {
      const updatedData = data
@@ -14,37 +15,38 @@ const Services = () => {
          (a, b) =>
            new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
        )
-       .slice(0, 3);
+       .slice(0, 1);
 
      setSortedData(updatedData);
    }, []);
 
-   const handleRowClick = (id: number | string) => {
-     navigate(`/post/${id}`);
-   };
+  //  const handleRowClick = (id: number | string) => {
+  //    navigate(`/post/${id}`);
+  //  };
   return (
     <>
       <section className="services">
         <div className="my-[1em]">
           <h2 className="font-black text-[1.17em] font-helvetica">Blog</h2>
           {sortedData.map((item) => (
-            <div className="rounded-b-lg border-b-2">
+            // <div className="rounded-b-lg border-b-2">
               <span
                 key={item.id}
-                onClick={() => handleRowClick(item.id)}
+                // onClick={() => handleRowClick(item.id)}
                 className=""
                 style={{ cursor: "pointer" }}
               >
-                <p className="p-2">{item.title}</p>
+                {/* <p className="p-2">{item.title}</p> */}
+                <p>Coming soon...!</p>
                 {/* <td>{new Date(item.createdAt).toLocaleDateString()}</td> */}
               </span>
-            </div>
+            // </div>
           ))}
-          <Link to="post">
+          {/* <Link to="post">
             <button className="btn btn-secondary justify-center items-center mt-2">
               More
             </button>
-          </Link>
+          </Link> */}
         </div>
         <div>
           <h2 className="font-black text-[1.17em] font-helvetica">Pricing</h2>

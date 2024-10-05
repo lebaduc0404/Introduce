@@ -4,9 +4,10 @@ import { Logo } from "../Img_Link";
 
 const Detail = () => {
   const { id } = useParams<{ id: string }>();
+  console.log(id);
+  
   const post = data.find((item) => item.id.toString() === id);
 
-  // Check if post data is not available
   if (!post) {
     return (
       <h2 className="font-black text-[1.17em] font-helvetica text-center">

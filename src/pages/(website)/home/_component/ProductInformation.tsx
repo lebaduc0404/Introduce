@@ -19,8 +19,8 @@ const ProductInformation = () => {
 
 
   const scrollRef = useRef<HTMLDivElement>(null);
-  const [atStart, setAtStart] = useState(true);
-  const [atEnd, setAtEnd] = useState(true);
+  // const [atStart, setAtStart] = useState(true);
+  // const [atEnd, setAtEnd] = useState(true);
   const handleNext = () => {
     if (scrollRef.current) {
       scrollRef.current.scrollBy({ left: 230, behavior: "smooth" });
@@ -32,35 +32,37 @@ const ProductInformation = () => {
     }
   };
 
-  const checkScrollPosition = () => {
-    if (scrollRef.current) {
-      const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
+  //Thực hiện hiệu ứng ấn nút next hoặc 
 
-      // Thêm một khoảng nhỏ (2px) để kiểm tra chính xác hơn
-      const tolerance = 2;
+  // const checkScrollPosition = () => {
+  //   if (scrollRef.current) {
+  //     const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
 
-      setAtStart(scrollLeft === 0);
-      setAtEnd(scrollLeft + clientWidth >= scrollWidth - tolerance);
-    }
-  };
+  //     // Thêm một khoảng nhỏ (2px) để kiểm tra chính xác hơn
+  //     const tolerance = 2;
 
-  useEffect(() => {
-    if (scrollRef.current) {
-      // Thêm sự kiện scroll để kiểm tra khi người dùng cuộn
-      scrollRef.current.addEventListener("scroll", checkScrollPosition);
-    }
+  //     setAtStart(scrollLeft === 0);
+  //     setAtEnd(scrollLeft + clientWidth >= scrollWidth - tolerance);
+  //   }
+  // };
 
-    // Đảm bảo vị trí cuộn được kiểm tra sau khi trang đã tải
-    setTimeout(() => {
-      checkScrollPosition();
-    }, 1000); // Đợi một chút để đảm bảo phần tử scroll đã sẵn sàng
+  // useEffect(() => {
+  //   if (scrollRef.current) {
+  //     // Thêm sự kiện scroll để kiểm tra khi người dùng cuộn
+  //     scrollRef.current.addEventListener("scroll", checkScrollPosition);
+  //   }
 
-    return () => {
-      if (scrollRef.current) {
-        scrollRef.current.removeEventListener("scroll", checkScrollPosition);
-      }
-    };
-  }, []);
+  //   // Đảm bảo vị trí cuộn được kiểm tra sau khi trang đã tải
+  //   setTimeout(() => {
+  //     checkScrollPosition();
+  //   }, 1000); // Đợi một chút để đảm bảo phần tử scroll đã sẵn sàng
+
+  //   return () => {
+  //     if (scrollRef.current) {
+  //       scrollRef.current.removeEventListener("scroll", checkScrollPosition);
+  //     }
+  //   };
+  // }, []);
 
 
   const openModal = (index: number) => {
@@ -189,22 +191,22 @@ const ProductInformation = () => {
               </a>
             ))}
           </div>
-          {!atStart && (
+          {/* {!atStart && ( */}
             <button
               onClick={handleBack}
               className="left-0 absolute top-[50%] p-[5px] text-3xl cursor-pointer text-black transform -translate-y-1/2 z-100"
             >
               <div className="mb-[3.3px] mr-[3.3px]">&#10094;</div>
             </button>
-          )}
-          {!atEnd && (
+          {/* )}
+          {!atEnd && ( */}
             <button
               onClick={handleNext}
               className="right-0 absolute top-[50%] p-[5px] text-3xl cursor-pointer text-black transform -translate-y-1/2 z-100"
             >
               <div className="mb-[3.3px] ml-[3.3px]">&#10095;</div>
             </button>
-          )}
+          {/* )} */}
           {isOpen && (
             <div
               className="fixed inset-0 bg-black bg-opacity-90 flex justify-center items-center z-50"

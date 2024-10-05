@@ -68,7 +68,7 @@ const ListPost = () => {
                 <Link to={`/detailblog/${item.id}`}>
                   <img
                     className="max-w-[130px] w-[auto] max-h-[80px] h-[100%]"
-                    src="https://cdn.tgdd.vn/2022/09/CookDish/kep-gap-do-nong-la-gi-co-bao-nhieu-loai-nen-mua-khong-avt-1200x676-1.jpg"
+                    src={item.image}
                     alt=""
                   />
                 </Link>

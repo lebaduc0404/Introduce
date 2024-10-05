@@ -37,7 +37,7 @@ const Detail = () => {
           <div className="ax-w-[300px] w-[100%] mb-2 h-auto flex justify-center">
             <img
               className="max-w-[300px] w-[100%] h-auto my-2"
-              src="https://cdn.tgdd.vn/2022/09/CookDish/kep-gap-do-nong-la-gi-co-bao-nhieu-loai-nen-mua-khong-avt-1200x676-1.jpg"
+              src={post.image}
               alt=""
             />
           </div>

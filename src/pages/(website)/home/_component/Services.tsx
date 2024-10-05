@@ -7,9 +7,8 @@ import { IPosts } from "@/common/types/IPosts";
 const Services = () => {
    const [sortedData, setSortedData] = useState<IPosts[]>([]);
    const navigate = useNavigate();
-
+  
    useEffect(() => {
-     // Sort posts by createdAt in descending order and take the first 3
      const updatedData = data
        .sort(
          (a, b) =>
@@ -28,30 +27,21 @@ const Services = () => {
       <section className="services">
         <div className="my-[1em]">
           <h2 className="font-black text-[1.17em] font-helvetica">Blog</h2>
-          <table className="table h-auto">
-            <thead>
-              <tr>
-                <th>#</th>
-                <th>Title</th>
-                <th>CreatedAt</th>
-              </tr>
-            </thead>
-            <tbody>
-              {sortedData.map((item, index) => (
-                <tr
-                  key={item.id}
-                  onClick={() => handleRowClick(item.id)}
-                  style={{ cursor: "pointer" }}
-                >
-                  <td>{index + 1}</td>
-                  <td>{item.title}</td>
-                  <td>{new Date(item.createdAt).toLocaleDateString()}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-          <Link to="/post">
-            <button className="btn btn-secondary justify-center items-center">
+          {sortedData.map((item) => (
+            <div className="rounded-b-lg border-b-2">
+              <span
+                key={item.id}
+                onClick={() => handleRowClick(item.id)}
+                className=""
+                style={{ cursor: "pointer" }}
+              >
+                <p className="p-2">{item.title}</p>
+                {/* <td>{new Date(item.createdAt).toLocaleDateString()}</td> */}
+              </span>
+            </div>
+          ))}
+          <Link to="post">
+            <button className="btn btn-secondary justify-center items-center mt-2">
               More
             </button>
           </Link>

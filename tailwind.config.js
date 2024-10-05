@@ -19,6 +19,7 @@ module.exports = {
     extend: {
       fontFamily: {
         helvetica: ['"Helvetica Neue"', "sans-serif"],
+        sans: ["Roboto", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",

@@ -1,22 +1,23 @@
 {
   "posts": [
-    {
-      "id": 1,
-      "title": "Whole food nutrition and calorie tracker",
-      "shortContent": "🥑 Whole food nutrition and calorie tracker.",
-      "longContent": [
-        "📸 Identify 470+ foods with your camera.",
-        "📊 Track whole food calories and nutrition.",
-        "🏆 Set food-specific and category-specific goals.",
-        "📔 Create a visual food diary.",
-        "📈 Get trends over time and learn about your food habits.",
-        "🔎 Discover new foods on your way to completing the Nutridex.",
-        "🥗 Learn about the nutritional values of different foods.",
-        "🍽️ Enjoy personalized meal recommendations based on your preferences.",
-        "📱 Sync with fitness trackers to monitor your physical activity."
-      ],
-      "createdAt": "2024-10-04T08:30:00Z"
-    },
+   {
+  "id": 1,
+  "title": "Whole food nutrition and calorie tracker",
+  "shortContent": "🥑 Whole food nutrition and calorie tracker with visual insights and personalized goals.",
+  "longContent": [
+    "📸 Identify 470+ foods with your camera for quick and easy tracking.",
+    "📊 Track whole food calories and nutrition with detailed breakdowns.",
+    "🏆 Set personalized goals based on food categories or specific ingredients for better results.",
+    "📔 Create a visual food diary that helps you see what you eat and make better choices.",
+    "📈 Get insights into your eating habits and food patterns over time to understand how they affect your health.",
+    "🔎 Discover new foods to explore and complete the Nutridex, expanding your knowledge of healthy options.",
+    "🥗 Learn about the nutritional values of different foods to make informed meal decisions.",
+    "🍽️ Enjoy meal recommendations tailored to your dietary preferences and goals.",
+    "📱 Sync with fitness trackers and apps to monitor your physical activity and get a complete picture of your health."
+  ],
+  "createdAt": "2024-10-04T08:30:00Z",
+  "image": "https://example.com/path-to-image.jpg"
+},
     {
       "id": 2,
       "title": "Track your daily nutrition effortlessly",

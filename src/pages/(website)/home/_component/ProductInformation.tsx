@@ -53,7 +53,7 @@ const ProductInformation = () => {
     // Đảm bảo vị trí cuộn được kiểm tra sau khi trang đã tải
     setTimeout(() => {
       checkScrollPosition();
-    }, 100); // Đợi một chút để đảm bảo phần tử scroll đã sẵn sàng
+    }, 1000); // Đợi một chút để đảm bảo phần tử scroll đã sẵn sàng
 
     return () => {
       if (scrollRef.current) {

@@ -8,5 +8,7 @@ services:
     startCommand: npm run start
     publish: dist
     routes:
-      - src: /.*
-        dest: /index.html
+      - src: /post/(.*)      # Match all /post routes
+        dest: /index.html     # Serve index.html for all /post routes
+      - src: /.*              # Match all other routes
+        dest: /index.html     # Serve index.html for all other routes

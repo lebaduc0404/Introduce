@@ -20,7 +20,7 @@ const ListPost = () => {
   const currentPosts = sortedData.slice(indexOfFirstPost, indexOfLastPost);
 
   const handleRowClick = (id: number | string) => {
-    navigate(`/post/${id}`);
+    navigate(`/detailblog/${id}`);
     setSelectedPostId(id);
   };
 
@@ -65,7 +65,7 @@ const ListPost = () => {
               } flex p-3 border-b-2 rounded-b-lg`}
             >
               <div>
-                <Link to={`/post/${item.id}`}>
+                <Link to={`/detailblog/${item.id}`}>
                   <img
                     className="max-w-[130px] w-[auto] max-h-[80px] h-[100%]"
                     src="https://cdn.tgdd.vn/2022/09/CookDish/kep-gap-do-nong-la-gi-co-bao-nhieu-loai-nen-mua-khong-avt-1200x676-1.jpg"

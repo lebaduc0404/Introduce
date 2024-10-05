@@ -6,22 +6,22 @@ import { data } from "@/pages/(website)/post/Data";
 import { IPosts } from "@/common/types/IPosts";
 
 const Services = () => {
-   const [sortedData, setSortedData] = useState<IPosts[]>([]);
+  const [sortedData, setSortedData] = useState<IPosts[]>([]);
   //  const navigate = useNavigate();
-  
-   useEffect(() => {
-     const updatedData = data
-       .sort(
-         (a, b) =>
-           new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
-       )
-       .slice(0, 1);
 
-     setSortedData(updatedData);
-   }, []);
+  useEffect(() => {
+    const updatedData = data
+      .sort(
+        (a, b) =>
+          new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
+      )
+      .slice(0, 1);
+
+    setSortedData(updatedData);
+  }, []);
 
   //  const handleRowClick = (id: number | string) => {
-  //    navigate(`/post/${id}`);
+  //    navigate(`/detailblog/${id}`);
   //  };
   return (
     <>
@@ -30,19 +30,19 @@ const Services = () => {
           <h2 className="font-black text-[1.17em] font-helvetica">Blog</h2>
           {sortedData.map((item) => (
             // <div className="rounded-b-lg border-b-2">
-              <span
-                key={item.id}
-                // onClick={() => handleRowClick(item.id)}
-                className=""
-                style={{ cursor: "pointer" }}
-              >
-                {/* <p className="p-2">{item.title}</p> */}
-                <p>Coming soon...!</p>
-                {/* <td>{new Date(item.createdAt).toLocaleDateString()}</td> */}
-              </span>
+            <span
+              key={item.id}
+              // onClick={() => handleRowClick(item.id)}
+              className=""
+              style={{ cursor: "pointer" }}
+            >
+              {/* <p className="p-2">{item.title}</p> */}
+              <p>Coming soon...!</p>
+              {/* <td>{new Date(item.createdAt).toLocaleDateString()}</td> */}
+            </span>
             // </div>
           ))}
-          {/* <Link to="post">
+          {/* <Link to="blog">
             <button className="btn btn-secondary justify-center items-center mt-2">
               More
             </button>

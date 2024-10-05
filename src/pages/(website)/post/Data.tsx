@@ -23,7 +23,8 @@ export const data: IPosts[] = [
       "🔄 **Offline mode and cloud sync**: Use the app in offline mode while traveling or in areas without internet connectivity. Once you're back online, all your data will sync with the cloud, ensuring your progress is always saved and accessible across devices.",
     ],
     createdAt: "2024-10-20T08:30:00Z",
-    image: "https://example.com/path-to-image.jpg",
+    image:
+      "https://cdn.tgdd.vn/2022/09/CookDish/kep-gap-do-nong-la-gi-co-bao-nhieu-loai-nen-mua-khong-avt-1200x676-1.jpg",
   },
   {
     id: 2,
@@ -43,7 +44,8 @@ export const data: IPosts[] = [
       "🎉 **Join challenges to keep you engaged in your nutrition journey**: Stay motivated by participating in community challenges designed to help you hit nutrition goals, such as eating more vegetables, reducing sugar, or meeting hydration targets. Earn badges and rewards for completing challenges.",
     ],
     createdAt: "2024-10-05T09:15:00Z",
-    image: "https://example.com/path-to-image.jpg",
+    image:
+      "https://cdn.tgdd.vn/2022/09/CookDish/kep-gap-do-nong-la-gi-co-bao-nhieu-loai-nen-mua-khong-avt-1200x676-1.jpg",
   },
   {
     id: 3,
@@ -63,7 +65,8 @@ export const data: IPosts[] = [
       "🥳 **Celebrate milestones and achievements along your journey**: Keep track of your progress by marking key milestones such as completing a fitness challenge, hitting a weight loss goal, or mastering a new exercise. The app celebrates these achievements with badges, certificates, and community shout-outs.",
     ],
     createdAt: "2024-10-06T10:00:00Z",
-    image: "https://example.com/path-to-image.jpg",
+    image:
+      "https://cdn.tgdd.vn/2022/09/CookDish/kep-gap-do-nong-la-gi-co-bao-nhieu-loai-nen-mua-khong-avt-1200x676-1.jpg",
   },
   {
     id: 4,
@@ -83,7 +86,8 @@ export const data: IPosts[] = [
       "🔒 **Ensure your data is secure and private**: With end-to-end encryption and privacy settings, your personal health data is secure. You control who sees your progress, whether it's your trainer, friends, or just you.",
     ],
     createdAt: "2024-10-06T11:30:00Z",
-    image: "https://example.com/path-to-image.jpg",
+    image:
+      "https://cdn.tgdd.vn/2022/09/CookDish/kep-gap-do-nong-la-gi-co-bao-nhieu-loai-nen-mua-khong-avt-1200x676-1.jpg",
   },
   {
     id: 5,
@@ -100,7 +104,8 @@ export const data: IPosts[] = [
       "🍰 **Post pictures and recipes of your healthy desserts**: Keep your meals exciting by sharing creative and nutritious dessert ideas. Post pictures and recipes of your healthy creations in the app’s community section, inspiring others to join the journey.",
     ],
     createdAt: "2024-10-10T15:00:00Z",
-    image: "https://example.com/path-to-image.jpg",
+    image:
+      "https://cdn.tgdd.vn/2022/09/CookDish/kep-gap-do-nong-la-gi-co-bao-nhieu-loai-nen-mua-khong-avt-1200x676-1.jpg",
   },
   {
     id: 6,
@@ -120,7 +125,8 @@ export const data: IPosts[] = [
       "🌸 **Share your wellness journey with others**: Inspire and encourage others by sharing your progress, challenges, and achievements in the community. Receive motivation and support from friends and wellness experts as you work toward achieving balance in your life.",
     ],
     createdAt: "2024-10-09T13:45:00Z",
-    image: "https://example.com/path-to-image.jpg",
+    image:
+      "https://cdn.tgdd.vn/2022/09/CookDish/kep-gap-do-nong-la-gi-co-bao-nhieu-loai-nen-mua-khong-avt-1200x676-1.jpg",
   },
   {
     id: 7,
@@ -140,7 +146,8 @@ export const data: IPosts[] = [
       "🤤 **Share your dessert creations in our community**: Post pictures and recipes of your healthy dessert creations in the app's community section. Get feedback, share tips, and inspire others to try healthier alternatives to traditional sugary treats.",
     ],
     createdAt: "2024-10-10T15:00:00Z",
-    image: "https://example.com/path-to-image.jpg",
+    image:
+      "https://cdn.tgdd.vn/2022/09/CookDish/kep-gap-do-nong-la-gi-co-bao-nhieu-loai-nen-mua-khong-avt-1200x676-1.jpg",
   },
   {
     id: 8,
@@ -160,7 +167,8 @@ export const data: IPosts[] = [
       "💡 **Get tips for healthier snacking**: Apply your newfound knowledge of food labels to find healthier snacks that fit your diet. The app provides snack suggestions that are both nutritious and satisfying.",
     ],
     createdAt: "2024-10-11T15:00:00Z",
-    image: "https://example.com/path-to-image.jpg",
+    image:
+      "https://cdn.tgdd.vn/2022/09/CookDish/kep-gap-do-nong-la-gi-co-bao-nhieu-loai-nen-mua-khong-avt-1200x676-1.jpg",
   },
   {
     id: 9,
@@ -180,7 +188,8 @@ export const data: IPosts[] = [
       "💡 **Get tips for transitioning to a plant-based lifestyle**: Whether you’re just starting out or looking to fully commit to a plant-based diet, the app offers tips and resources for making the transition as smooth as possible.",
     ],
     createdAt: "2024-10-12T16:00:00Z",
-    image: "https://example.com/path-to-image.jpg",
+    image:
+      "https://cdn.tgdd.vn/2022/09/CookDish/kep-gap-do-nong-la-gi-co-bao-nhieu-loai-nen-mua-khong-avt-1200x676-1.jpg",
   },
   {
     id: 10,
@@ -198,7 +207,8 @@ export const data: IPosts[] = [
       "🎯 **Set personalized tracking goals based on your lifestyle**: Đặt ra các mục tiêu thực tế mà bạn có thể đạt được, chẳng hạn như giảm 500 calo mỗi ngày, tăng cường protein trong bữa ăn hoặc thử một loại thực phẩm mới mỗi tuần. Ghi chú lại để dễ dàng theo dõi tiến độ của bạn.",
     ],
     createdAt: "2024-10-13T17:00:00Z",
-    image: "",
+    image:
+      "https://cdn.tgdd.vn/2022/09/CookDish/kep-gap-do-nong-la-gi-co-bao-nhieu-loai-nen-mua-khong-avt-1200x676-1.jpg",
   },
   {
     id: 11,
@@ -216,7 +226,8 @@ export const data: IPosts[] = [
       "🌊 **Join community challenges focused on hydration**: Tham gia các thử thách cộng đồng giúp khuyến khích bạn và bạn bè uống đủ nước. Bạn có thể tạo một nhóm nhỏ và cùng nhau đặt mục tiêu, chia sẻ tiến độ và động viên nhau.",
     ],
     createdAt: "2024-10-14T18:00:00Z",
-    image: "",
+    image:
+      "https://cdn.tgdd.vn/2022/09/CookDish/kep-gap-do-nong-la-gi-co-bao-nhieu-loai-nen-mua-khong-avt-1200x676-1.jpg",
   },
   {
     id: 12,
@@ -234,6 +245,7 @@ export const data: IPosts[] = [
       "👥 **Share your favorite protein-packed meals in our community**: Kết nối với cộng đồng để chia sẻ công thức và trải nghiệm về các món ăn giàu protein, từ đó nhận được phản hồi và ý tưởng mới.",
     ],
     createdAt: "2024-10-15T19:00:00Z",
-    image: "",
+    image:
+      "https://cdn.tgdd.vn/2022/09/CookDish/kep-gap-do-nong-la-gi-co-bao-nhieu-loai-nen-mua-khong-avt-1200x676-1.jpg",
   },
 ];

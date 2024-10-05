@@ -35,21 +35,33 @@ const ProductInformation = () => {
   const checkScrollPosition = () => {
     if (scrollRef.current) {
       const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
+
+      // Thêm một khoảng nhỏ (2px) để kiểm tra chính xác hơn
+      const tolerance = 2;
+
       setAtStart(scrollLeft === 0);
-      setAtEnd(scrollLeft + clientWidth >= scrollWidth);
+      setAtEnd(scrollLeft + clientWidth >= scrollWidth - tolerance);
     }
   };
+
   useEffect(() => {
     if (scrollRef.current) {
+      // Thêm sự kiện scroll để kiểm tra khi người dùng cuộn
       scrollRef.current.addEventListener("scroll", checkScrollPosition);
     }
-    checkScrollPosition();
+
+    // Đảm bảo vị trí cuộn được kiểm tra sau khi trang đã tải
+    setTimeout(() => {
+      checkScrollPosition();
+    }, 100); // Đợi một chút để đảm bảo phần tử scroll đã sẵn sàng
+
     return () => {
       if (scrollRef.current) {
         scrollRef.current.removeEventListener("scroll", checkScrollPosition);
       }
     };
   }, []);
+
 
   const openModal = (index: number) => {
     setCurrentIndex(index);
